@@ -38,9 +38,9 @@ $show_covid = get_field('show-covid');
 if ($show_covid === NULL || $show_covid) {
 ?>
 
-	<div class="show-covid">
-	<b>「訂貨」 **疫情關係 運輸偶有延遲 預2-3weeks</b>
-	</div>
+<div class="show-covid">
+    <b>「訂貨」 **疫情關係 運輸偶有延遲 預2-3weeks</b>
+</div>
 
 <?php
 }
@@ -48,42 +48,41 @@ if ($show_covid === NULL || $show_covid) {
 ?>
 <br>
 <div class="woocommerce-product-details__short-description">
-	<?php
+    <?php
 	echo $short_description;
 	// WPCS: XSS ok. ?>
 </div>
 
 <script type="text/javascript">
-	$(function(){
-		if($('.woocommerce-product-details__short-description p').html()=='.')
-		{
-			$('.woocommerce-product-details__short-description').fadeOut(0);
-		}
-	})
+$(function() {
+    if ($('.woocommerce-product-details__short-description p').html() == '.') {
+        $('.woocommerce-product-details__short-description').fadeOut(0);
+    }
+})
 </script>
 <div class="" style="margin-top:20px;">
-	<span style="font-weight:bold;">下單前請先細閱：</span> <br> <br>
+    <span style="font-weight:bold;">下單前請先細閱：</span> <br> <br>
 
-<span style="color:#d5418d;font-weight:bold;">訂貨程序：</span> <br>
-・網站內選購貨品>Checkout >入數付款確認<br>
-・可以credit card / FPS / Online Ebanking / ATM<br>
-・訂貨後>到貨wts通知 >門市取貨 /順豐到付<br>
-・如缺貨 全數退回<br><br>
+    <span style="color:#d5418d;font-weight:bold;">訂貨程序：</span> <br>
+    ・網站內選購貨品>Checkout >入數付款確認<br>
+    ・可以credit card / FPS / Online Ebanking / ATM<br>
+    ・訂貨後>到貨wts通知 >門市取貨 /順豐到付<br>
+    ・如缺貨 全數退回<br><br>
 
-<span style="color:#d5418d;font-weight:bold;">注意：</span><br>
-因日圓浮動或日本不定期on sale，網站顯示的貨物價錢有機會隨時變動<br><br>
+    <span style="color:#d5418d;font-weight:bold;">注意：</span><br>
+    因日圓浮動或日本不定期on sale，網站顯示的貨物價錢有機會隨時變動<br><br>
 
-<!--  -->
-<span style="color:#d5418d;font-weight:bold;">門市地址:</span><br>
-・觀塘巧明街105號 好運大廈8樓C3<br>
-・Tue - Fri 4-8pm / Sat-Sun 3-7pm <br>
-・任何查詢可聯絡 Wts: 94444920<br><br>
+    <!--  -->
+    <span style="color:#d5418d;font-weight:bold;">門市地址:</span><br>
+    ・觀塘 62號駿業街 京貿中心 2樓E<br>
+    ・Tue - Fri 4-8pm / Sat-Sun 3-7pm <br>
+    ・任何查詢可聯絡 Wts: 94444920<br><br>
 
-<span style="color:#d5418d;font-weight:bold;">😘溫提：</span><br>
-・疫情期間到貨期不穩定 請理解見諒 急單接唔到 🙏🏻<br>
-・到貨後超過2星期未取貨並沒通知DJS/貨品會取消或需再訂
+    <span style="color:#d5418d;font-weight:bold;">😘溫提：</span><br>
+    ・疫情期間到貨期不穩定 請理解見諒 急單接唔到 🙏🏻<br>
+    ・到貨後超過2星期未取貨並沒通知DJS/貨品會取消或需再訂
 
-<!-- <span style="color:#d5418d;font-weight:bold;">取貨方式：</span> <br><br>
+    <!-- <span style="color:#d5418d;font-weight:bold;">取貨方式：</span> <br><br>
 
 [1] 順豐到付 站/櫃/便利店/上門<br>
 請提供地址 + 收件人姓名<br><br>
