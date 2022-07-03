@@ -1,0 +1,332 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
+
+require_once('./wp-load.php');
+
+$args = array(
+    'post_type' => 'product',
+    'post_status' => array( 'publish', 'private'),
+    'posts_per_page' => 1 ,
+    'orderby'=> 'menu_order',
+    'order' => 'ASC'
+);
+
+$products = new WP_Query($args);
+
+if($products->have_posts() )
+{
+	$products->the_post();
+//  echo the_title();
+	$smallest_menu_order =  get_post_field('menu_order', get_the_ID());
+}
+else {
+	// code...
+	$smallest_menu_order =0;
+}
+
+
+
+require_once "simple_html_dom.php";
+
+?>
+<!doctype html>
+<html>
+<head>
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="get-store-data.js"></script>
+
+
+
+<meta charset="UTF-8">
+<title>Get Data(JP Disneystore):</title>
+<style type="text/css">
+html{
+}
+
+table#product-table{
+  border-spacing: 0px;
+  margin: 0 0 40px 0;
+}
+
+table#product-table td {
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+table#product-table tr td:first-child{
+  border-left: 1px solid #000;
+
+}
+table#product-table th{
+	background:#000;
+color:#fff;
+	padding:10px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>Get Data(JP Disneystore):</h1>
+
+<form method="post" action="get-store-data.php">
+<textarea name="ids_str" rows="10" cols="80"><?php if (!empty($_POST['ids_str'])) {
+	echo $_POST['ids_str'];
+} ?></textarea>
+<br>
+<input type="submit" name="" value="submit" style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;cursor:pointer;">
+</form>
+<br>
+<?php
+echo 'smallest_menu_order: '.$smallest_menu_order;
+ ?>
+
+<br><br>
+
+ <b>Get products string</b><br>
+
+<code>
+  var str2 ='';
+
+  for(i=0;i<$('.grid-item__wrap').size();i++)
+  {
+      var str = $('.grid-item__wrap').eq(i).attr('href');
+      str =str.replace('/g/g','');
+      str =str.replace('/','');
+
+      str2+=str+',';
+  }
+  str2= str2.substring(0, str2.length - 1);
+
+  console.log(str2);
+
+</code>
+
+
+<code>
+var str='';for(i=0;i>$('.p-temp-inner__image').size();i++){var str2= $('.p-temp-inner__image').eq(i).attr('href') ;str2=str2.replace('/g/g','').replace('/','');str+=str2+',';}str =.sri sen-1co.st
+
+
+
+ <br><br>
+    <table id="product-table">
+    <tr>
+    <th>menu_order</th>
+    <th>sku</th>
+    <th>Name</th>
+    <th>Type</th>
+<th>cost_price</th>
+ <th>regular_price</th>
+  <th>post_excerpt</th>
+   <th>fifu_image_url</th>
+	<th>fifu_image_url_0</th>
+	 <th>fifu_image_url_1</th>
+	 <th>fifu_image_url_2</th>
+	 <th>fifu_image_url_3</th>
+	 <th>fifu_image_url_4</th>
+	 <th>fifu_image_url_5</th>
+	 <th>fifu_image_url_6</th>
+	 <th>Categories</th>
+	 <th>Tags</th>
+   <th>Published</th>
+    </tr>
+    <?php
+
+
+//	$url = "http://store.disney.co.jp/g/g".$row['item_store_id']."/";
+
+
+if (!empty($_POST['ids_str'])) {
+	$ids_str = $_POST['ids_str'];
+		$sku_arr = explode(",", $ids_str);
+
+
+    for ($i=0;$i<sizeof($sku_arr);$i++) {
+        $url = "http://store.disney.co.jp/g/g".$sku_arr[$i]."/";
+
+        $htmlContent = str_get_html(file_get_contents($url));
+
+
+        $item_name=$htmlContent->find("h1[class=p-product__heading]", 0)->plaintext;
+
+
+
+        $first=false;
+
+
+        //	  $item_stock = trim($htmlContent->find("dl[class=p-product__count__state] dd",0)->plaintext);
+
+
+        $item_name=$htmlContent->find("h1[class=p-product__heading]", 0)->plaintext;
+        $yen_price =$htmlContent->find("p[class=p-product__price]", 0)->plaintext;
+        $yen_price=str_replace("円（税込）", "", $yen_price);
+        $yen_price=str_replace(",", "", $yen_price);
+
+        $item_image_url_arr=$htmlContent->find("ul[id=thumb] li");
+
+
+        //	$item_image_url = "http:".$htmlContent->find("ul[id=thumb] li a img",0)->getAttribute('src');
+
+
+
+
+        $item_size = $htmlContent->find("div[class=p-product__detail__text]", 1)->plaintext.' '.$htmlContent->find("div[class=p-product__detail__text]", 2)->plaintext;
+
+        $item_size=str_replace("サイズ ", "", $item_size);
+        $item_size=str_replace("高さ約", "", $item_size);
+        $item_size=str_replace("高さ約", "", $item_size);
+        $item_size=str_replace("幅", "", $item_size);
+        $item_size=str_replace("奥行き", "", $item_size);
+        $item_size=str_replace("ボックス:", "包裝盒size:", $item_size);
+        $item_size=str_replace("本体:", "本体size:", $item_size);
+
+        $item_size=ltrim($item_size);
+
+        $item_size = trim(preg_replace('/\s\s+/', ' ', $item_size));
+        $item_size=str_replace(" ", "", $item_size);
+		//		$item_size='<div>hi</div>'.$item_size.'<div>hi</div>';
+
+        //	echo $item_size;
+
+
+
+        $item_image_url_str="";
+
+        $item_image_arr= array();
+
+
+        for ($j=0;$j<sizeof($item_image_url_arr);$j++) {
+            array_push($item_image_arr, "http:".$item_image_url_arr[$j]->find("a img", 0)->getAttribute('data-src'));
+
+        }
+
+        $empty_space= 7-sizeof($item_image_arr);
+
+
+
+        $menu_order = $smallest_menu_order+($i+1)*100 - (sizeof($sku_arr)+1)*100 ;
+  //      echo $menu_order;
+//    $menu_order = $smallest_menu_order;//sizeof($sku_arr);
+  echo'<tr>';
+        echo '<td>'.$menu_order.'</td>';
+        echo '<td>'.$sku_arr[$i].'</td>';
+        echo '<td>'.$item_name.'</td>';
+        echo '<td>simple</td>';
+        echo '<td>'.$yen_price.'</td>';
+        echo '<td>999</td>';
+        echo '<td>';
+
+        echo'貨物大小：<br/>';
+        echo '&NewLine;'.$item_size.'&NewLine;&NewLine;';
+
+
+        echo'<br/><br/>訂貨程序：<br/>
+1. 在網站內選購貨品然後Checkout結帳<br/>
+2. 銀行入數，並Whatapps 入數紙到94444920 作付款確認<br/>
+3. 我們替您訂貨 / 留現貨 ＝》到貨Whatapps通知 ＝》門市取貨 / 交收 / 寄貨&NewLine;&NewLine;注意：<br/>
+1. 因日圓浮動或日本不定期on sale，網站顯示的貨物價錢有機會隨時變動，希望大家諒解。<br/>
+2. 我們不能保證日本100%有存貨成功購入，若有缺貨全數退款。';
+
+        echo'</td>';
+        //
+        // echo '<td>'.$item_name.'</td>';
+        // echo '<td>'.$yen_price.'</td>';
+        echo '<td>'.$item_image_arr[0].'</td>';
+
+        for ($j=0;$j<sizeof($item_image_arr);$j++) {
+            echo '<td>'.$item_image_arr[$j].'</td>';
+        }
+
+        for ($j=0;$j<$empty_space;$j++) {
+            echo '<td></td>';
+        }
+
+        echo '<td>Japan Disneystore</td>';
+
+        echo '<td>tags</td>';
+
+
+        echo '<td>0</td>';
+
+        echo'</tr>';
+    } ?>
+</table>
+
+
+<a href="#" id="xx" style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;">Export Table data into Excel</a>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+function exportTableToCSV($table, filename) {
+
+			var $rows = $table.find('tr:has(td),tr:has(th)'),
+
+					// Temporary delimiter characters unlikely to be typed by keyboard
+					// This is to avoid accidentally splitting the actual contents
+					tmpColDelim = String.fromCharCode(11), // vertical tab character
+					tmpRowDelim = String.fromCharCode(0), // null character
+
+					// actual delimiter characters for CSV format
+					colDelim = '","',
+					rowDelim = '"\r\n"',
+
+					// Grab text from table into CSV formatted string
+					csv = '"' + $rows.map(function (i, row) {
+							var $row = $(row), $cols = $row.find('td,th');
+
+							return $cols.map(function (j, col) {
+									var $col = $(col), text = $col.text();
+
+									return text.replace(/"/g, '""'); // escape double quotes
+
+							}).get().join(tmpColDelim);
+
+					}).get().join(tmpRowDelim)
+							.split(tmpRowDelim).join(rowDelim)
+							.split(tmpColDelim).join(colDelim) + '"',
+
+
+
+					// Data URI
+					csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+					console.log(csv);
+
+				if (window.navigator.msSaveBlob) { // IE 10+
+					//alert('IE' + csv);
+					window.navigator.msSaveOrOpenBlob(new Blob([csv], {type: "text/plain;charset=utf-8;"}), "csvname.csv")
+				}
+				else {
+					$(this).attr({ 'download': filename, 'href': csvData, 'target': '_blank' });
+				}
+	}
+
+	// This must be a hyperlink
+	$("#xx").on('click', function (event) {
+
+			exportTableToCSV.apply(this, [$('#product-table'), 'export.csv']);
+
+			// IF CSV, don't do event.preventDefault() or return false
+			// We actually need this to be a typical hyperlink
+	});
+
+});
+
+</script>
+<?php
+}
+ ?>
+</body>
+</html>
