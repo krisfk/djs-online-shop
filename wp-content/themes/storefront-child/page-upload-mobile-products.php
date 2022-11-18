@@ -169,6 +169,7 @@ if($_POST['submit'])
             echo count($_FILES['files_upload']['name']);
             // echo count($_FILES['files_upload']['name'];
         //other image
+        echo $_FILES['files_upload']['name'][0];
         for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                         $wordpress_upload_dir = wp_upload_dir();
@@ -338,7 +339,7 @@ if($product_type='simple')
 
 if(!empty($_FILES))
 {
-    echo $_FILES['files_upload']['name'][0];
+    // echo $_FILES['files_upload']['name'];
 
     // $total = count($_FILES['files_upload']['name']);
 
