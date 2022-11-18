@@ -132,7 +132,7 @@ $woocommerce = new Client(
 
         <div class="container mt-3">
 
-            <h4>djs product upload by mobile</h4>
+            <h4>Djs Web Product Upload Via Mobile</h4>
 
             <div class="mt-4">
                 <label for="product-name">Product Name:</label>
