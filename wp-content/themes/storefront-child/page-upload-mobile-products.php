@@ -55,7 +55,7 @@ $prod_data = [
 	'description' => 'A very meaningful product description',
 	'images'      => [
 		[
-			'src'      => 'https://shop.local/path/to/image.jpg',
+			'src'      => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg',
 			'position' => 0,
 		],
 	],
