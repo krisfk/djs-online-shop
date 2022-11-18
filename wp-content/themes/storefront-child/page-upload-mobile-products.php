@@ -408,6 +408,14 @@ if($_POST['submit'])
 
     </form>
 
+    <script type="text/javascript">
+    $(function() {
+
+
+        $('.opt-rows-div .row').fadeOut(0);
+        $('.opt-rows-div .row').eq(0).fadeIn(0);
+    })
+    </script>
 </body>
 
 </html>
