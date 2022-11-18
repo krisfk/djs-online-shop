@@ -278,7 +278,7 @@ $woocommerce->post('products', $data);
             </div>
             <div class="mt-3">
                 <div>
-                    <label class="label-bold" for="file-upload-2">Product Images:</label>
+                    <label class="label-bold" for="file-upload-2">Product Images(Other Images):</label>
                 </div>
                 <input type="file" name="files_upload[]" id="file-upload-2" accept=".jpg" multiple>
             </div>
