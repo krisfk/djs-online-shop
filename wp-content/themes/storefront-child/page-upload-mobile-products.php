@@ -128,27 +128,32 @@ $woocommerce = new Client(
     <h3>djs product upload by mobile</h3>
 
 
-    <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
 
 
-        <div>
-            <label for="product-name">Product Name:</label>
-            <input type="text" class="form-control">
+        <div class="container">
+
+
+            <div>
+                <label for="product-name">Product Name:</label>
+                <input type="text" class="form-control">
+            </div>
+
         </div>
 
-    </div>
+    </form>
 
 </body>
 
 </html>
 
 
-
+<!-- 
 
 <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="files_upload[]" id="file_upload" accept=".jpg" multiple>
     <input type="submit" value="submit">
-</form>
+</form> -->
 <?php
 
 
