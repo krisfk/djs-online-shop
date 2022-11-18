@@ -74,7 +74,7 @@ $prod_data = [
 	],
 ];
 
-$product = $this->woocommerce->post( 'products', $prod_data );
+$woocommerce->post( 'products', $prod_data );
 
 
 ?>
