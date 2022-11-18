@@ -250,7 +250,7 @@ if($_POST['submit'])
     
 
         
-    if($product_type='simple')
+    if($product_type=='simple')
     {
         $data = [
         'name' => $product_name,
@@ -271,7 +271,7 @@ if($_POST['submit'])
     }
 
 
-    if($product_type='variable')
+    if($product_type=='variable')
     {
      
         $data = [
