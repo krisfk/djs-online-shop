@@ -32,12 +32,12 @@ require_once('./wp-load.php');
 
 // Load Composer autoloader.
 // @link https://github.com/brightnucleus/jasper-client/blob/master/tests/bootstrap.php#L55-L59
-$autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
-if ( is_readable( $autoloader ) ) {
-	require_once $autoloader;
-}
+// $autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
+// if ( is_readable( $autoloader ) ) {
+// 	require_once $autoloader;
+// }
 
-use Automattic\WooCommerce\Client;
+// use Automattic\WooCommerce\Client;
 
 
 //WC_API_Client
