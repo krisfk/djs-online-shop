@@ -83,7 +83,7 @@ $product = $woocommerce->post( 'products', $prod_data );
 $variation_data = [
 	'regular_price' => '15.00',
 	'image'         => [
-		'src' => 'https://shop.local/path/to/image_size_l.jpg',
+		'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
 	],
 	'attributes'    => [
 		[
