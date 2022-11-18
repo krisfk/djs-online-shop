@@ -169,6 +169,16 @@ $woocommerce = new Client(
 
             </div>
 
+            <div class="mt-3">
+                <label class="label-bold" for="product-price">Product Price:</label>
+                <input type="text" class="form-control" name="product-price" id="product-price">
+            </div>
+
+
+            <div class="mt-3">
+                <input type="submit" value="submit">
+            </div>
+
 
         </div>
 
