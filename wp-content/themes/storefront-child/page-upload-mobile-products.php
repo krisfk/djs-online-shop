@@ -411,7 +411,7 @@ for($i=0;$i<$number_of_options;$i++)
 
             <div class="variable-div">
                 <div class="mt-3">
-                    <label class="label-bold" for="number-of-options">Number of Option(s):</label>
+                    <label class="label-bold" for="number-of-options">*Number of Option(s):</label>
                     <select id="number-of-options" class="form-select" aria-label="Default" name="number-of-options">
                         <option selected value="1">1</option>
                         <option value="2">2</option>
@@ -458,12 +458,12 @@ for($i=0;$i<$number_of_options;$i++)
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                <label for="opt-<?php echo $k;?>" class="label-bold">Option <?php echo $k;?></label>
+                                <label for="opt-<?php echo $k;?>" class="label-bold">*Option <?php echo $k;?></label>
                                 <input class="form-control" id="opt-<?php echo $k;?>" name="opt-<?php echo $k;?>"
                                     type="text">
                             </div>
                             <div class="col-6">
-                                <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
+                                <label for="vp-price-<?php echo $k;?>" class="label-bold">*Price</label>
                                 <input class="form-control" id="vp-price-<?php echo $k;?>"
                                     name="vp-price-<?php echo $k;?>" type="text">
                             </div>
