@@ -212,7 +212,7 @@ if($_POST['submit'])
         }
 
 
-        print_r($product_img_arr);
+        // print_r($product_img_arr);
             
         
 
@@ -228,27 +228,20 @@ if($_POST['submit'])
     
 if($product_type='simple')
 {
-    // $data = [
-    // 'name' => $product_name,
-    // 'type' => 'simple',
-    // 'regular_price' => $price,
-    // 'short_description' => $short_product_description,
-    // 'categories' => [
-    //     [
-    //         'id' => 9
-    //     ]
-    // ],
-    // 'images' => [
-    //     [
-    //         'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
-    //     ],
-    //     [
-    //         'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg'
-    //     ]
-    // ]
-    // ];
+    $data = [
+    'name' => $product_name,
+    'type' => 'simple',
+    'regular_price' => $price,
+    'short_description' => $short_product_description,
+    'categories' => [
+        [
+            'id' => 9
+        ]
+    ],
+    'images' => $product_img_arr
+    ];
 
-// $woocommerce->post('products', $data);
+$woocommerce->post('products', $data);
 
    
 }
