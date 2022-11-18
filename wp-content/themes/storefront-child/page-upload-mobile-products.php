@@ -382,11 +382,13 @@ if($_POST['submit'])
                         <div class="row mb-2">
                             <div class="col-6">
                                 <label for="opt-<?php echo $k;?>" class="label-bold">Option <?php echo $k;?></label>
-                                <input class="form-control" id="opt-<?php echo $k;?>" type="text">
+                                <input class="form-control" id="opt-<?php echo $k;?>" name="opt-<?php echo $k;?>"
+                                    type="text">
                             </div>
                             <div class="col-6">
                                 <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
-                                <input class="form-control" id="vp-price-<?php echo $k;?>" type="text">
+                                <input class="form-control" id="vp-price-<?php echo $k;?>"
+                                    name="vp-price-<?php echo $k;?>" type="text">
                             </div>
                         </div>
                         <?php
