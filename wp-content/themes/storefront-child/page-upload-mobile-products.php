@@ -368,7 +368,7 @@ if($_POST['submit'])
                     </label>
                 </div>
 
-                <div class="attr-rows-div mt-3">
+                <div class="opt-rows-div mt-3">
 
                     <?php
                 
@@ -378,8 +378,8 @@ if($_POST['submit'])
 
                     <div class="row mb-2">
                         <div class="col-6">
-                            <label for="attr-<?php echo $k;?>" class="label-bold">Attribute <?php echo $k;?></label>
-                            <input class="form-control" id="attr-<?php echo $k;?>" type="text">
+                            <label for="opt-<?php echo $k;?>" class="label-bold">Option <?php echo $k;?></label>
+                            <input class="form-control" id="opt-<?php echo $k;?>" type="text">
                         </div>
                         <div class="col-6">
                             <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
