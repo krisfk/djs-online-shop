@@ -73,39 +73,39 @@ if(!empty($_FILES))
         // echo $_FILES["file_upload"]["name"][0];
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
-                echo 1;
-                    //     $wordpress_upload_dir = wp_upload_dir();
+                // echo 1;
+                        $wordpress_upload_dir = wp_upload_dir();
 
-                    //     $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
 
-                    //     $i=0;
-                    // while( file_exists( $new_file_path ) ) {
-                    //     $i++;
-                    //     $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["file_upload"]["name"][$i];
-                    // }
+                        $i=0;
+                    while( file_exists( $new_file_path ) ) {
+                        $i++;
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["file_upload"]["name"][$i];
+                    }
                     
-                    // if (move_uploaded_file($_FILES["file_upload"]["tmp_name"][$i], $new_file_path)) {
+                    if (move_uploaded_file($_FILES["file_upload"]["tmp_name"][$i], $new_file_path)) {
 
-                    //     $upload_id = wp_insert_attachment( array(
-                    //     'guid'           => $new_file_path, 
-                    //     'post_mime_type' => 'image/*',
-                    //     //$_FILES["file_upload"]["tmp_name"],
-                    //     'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"][$i] ),
-                    //     'post_content'   => '',
-                    //     'post_status'    => 'inherit'
-                    // ), $new_file_path );
-                    // require_once( ABSPATH . 'wp-admin/includes/image.php' );
+                        $upload_id = wp_insert_attachment( array(
+                        'guid'           => $new_file_path, 
+                        'post_mime_type' => 'image/*',
+                        //$_FILES["file_upload"]["tmp_name"],
+                        'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"][$i] ),
+                        'post_content'   => '',
+                        'post_status'    => 'inherit'
+                    ), $new_file_path );
+                    require_once( ABSPATH . 'wp-admin/includes/image.php' );
 
-                    // wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
-                    // //  conclude Image
+                    wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+                    //  conclude Image
 
                     // update_field( 'conclude_image', $upload_id, $school_id );
                     
-                    // // conclusion_content
+                    // conclusion_content
                 
-                    // } else {
-                    //     echo "Sorry, there was an error uploading your file.";
-                    // }  
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }  
 
 
             }
