@@ -378,12 +378,12 @@ if($_POST['submit'])
 
                     <div class="row">
                         <div class="col-6">
-                            <label for="attr-1" class="label-bold">Attribute 1</label>
-                            <input class="form-control" id="attr-1" type="text">
+                            <label for="attr-<?php echo $k;?>" class="label-bold">Attribute <?php echo $k;?></label>
+                            <input class="form-control" id="attr-<?php echo $k;?>" type="text">
                         </div>
                         <div class="col-6">
-                            <label for="vp-price-1" class="label-bold">Price</label>
-                            <input class="form-control" id="vp-price-1" type="text">
+                            <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
+                            <input class="form-control" id="vp-price-<?php echo $k;?>" type="text">
                         </div>
                     </div>
                     <?php
