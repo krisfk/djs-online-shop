@@ -37,7 +37,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 // 	require_once $autoloader;
 // }
 
-// use Automattic\WooCommerce\Client;
+use Automattic\WooCommerce\Client;
 
 
 //WC_API_Client
