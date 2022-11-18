@@ -418,9 +418,9 @@ if($_POST['submit'])
         $('.opt-rows-div .row').fadeOut(0);
         $('.opt-rows-div .row').eq(0).fadeIn(0);
 
-        $('.product-type').change(function() {
+        $('input[name="product-type"]').change(function() {
 
-            alert($('.product-type').val());
+            alert($('input[name="product-type"]').val());
 
         })
     })
