@@ -464,7 +464,7 @@ for($i=0;$i<$number_of_options;$i++)
                             </div>
                             <div class="col-6">
                                 <label for="vp-price-<?php echo $k;?>" class="label-bold">*Price</label>
-                                <input class="form-control" id="vp-price-<?php echo $k;?>"
+                                <input class="form-control wp-price" id="vp-price-<?php echo $k;?>"
                                     name="vp-price-<?php echo $k;?>" type="text">
                             </div>
                         </div>
@@ -530,6 +530,17 @@ for($i=0;$i<$number_of_options;$i++)
 
 
 
+        })
+
+        $('.wp-price').change(function() {
+
+            var is_same_price = $('input[name="is-same-price"]:checked').val();
+
+            if (is_same_price == 'yes') {
+
+
+                $('.wp-price').val($(this).val());
+            }
         })
     })
     </script>
