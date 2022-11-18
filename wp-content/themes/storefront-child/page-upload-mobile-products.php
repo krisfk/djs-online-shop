@@ -182,7 +182,7 @@ if($_POST['submit'])
 
             <div class="mt-3">
                 <label class="label-bold" for="product-price">Product Price:</label>
-                <input type="text" class="form-control" name="product-price" id="product-price">
+                <input type="number" class="form-control" name="product-price" id="product-price">
             </div>
 
 
