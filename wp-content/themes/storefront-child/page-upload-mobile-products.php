@@ -368,7 +368,7 @@ if($_POST['submit'])
                     </label>
                 </div>
 
-                <div class="attr-rows-div mt-4">
+                <div class="attr-rows-div mt-3">
 
                     <?php
                 
