@@ -365,11 +365,11 @@ if($_POST['submit'])
                 <div class="row">
 
                     <div class="col-6">
-                        <label for="attr-1">Attribute 1</label>
+                        <label for="attr-1" class="label-bold">Attribute 1</label>
                         <input class="form-control" id="attr-1" type="text">
                     </div>
                     <div class="col-6">
-                        <label for="vp-price-1">Price</label>
+                        <label for="vp-price-1" class="label-bold">Price</label>
                         <input class="form-control" id="vp-price-1" type="text">
                     </div>
 
