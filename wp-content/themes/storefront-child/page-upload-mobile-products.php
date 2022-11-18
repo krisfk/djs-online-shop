@@ -430,8 +430,8 @@ if($_POST['submit'])
             }
 
             if (type == "variable") {
-                $('.variable-div').fadeOut(0);
-                $('.simple-div').fadeIn(0);
+                $('.variable-div').fadeIn(0);
+                $('.simple-div').fadeOut(0);
             }
         })
     })
