@@ -139,19 +139,19 @@ $woocommerce = new Client(
                 <input type="text" class="form-control" name="product-name" id="product-name">
             </div>
 
-            <div class="mt-4">
+            <div class="mt-3">
                 <div>
                     <label class="label-bold" for="file-upload">Product Images:</label>
                 </div>
                 <input type="file" name="files_upload[]" id="file-upload" accept=".jpg" multiple>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-3">
                 <label class="label-bold" for="product-description">Product Description:</label>
                 <input type="text" class="form-control" name="product-description" id="product-description">
             </div>
 
-            <div class="mt-4">
+            <div class="mt-3">
 
                 <div class="label-bold">Product Type</div>
                 <div class="margin:0.2rem 0 0 0;">
