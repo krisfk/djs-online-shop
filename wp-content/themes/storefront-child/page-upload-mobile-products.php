@@ -423,12 +423,12 @@ if($_POST['submit'])
 
             var type = $("input[name='product-type']:checked").val();
 
-            if (type = "simple") {
+            if (type == "simple") {
                 $('.variable-div').fadeOut(0);
                 $('.simple-div').fadeIn(0);
             }
 
-            if (type = "variable") {
+            if (type == "variable") {
                 $('.variable-div').fadeOut(0);
                 $('.simple-div').fadeIn(0);
             }
