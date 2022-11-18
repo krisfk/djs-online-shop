@@ -132,6 +132,18 @@ if($_POST['submit'])
 {
     $product_name=$_POST['product-name'];
     $short_product_description=$_POST['product-description'];
+    $product_type=$_POST['product-type'];
+    $price=$_POST['price'];
+
+    echo $product_name;
+    echo '<br>';
+    echo $short_product_description;
+    echo '<br>';
+    echo $product_type;
+    echo '<br>';
+    echo $price;
+    echo '<br>';
+    
 
 }
 ?>
