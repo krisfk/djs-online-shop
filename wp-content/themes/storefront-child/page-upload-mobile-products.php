@@ -338,7 +338,7 @@ if($product_type='simple')
 
 if(!empty($_FILES))
 {
-    echo count($_FILES['files_upload']['name']);
+    echo $_FILES['files_upload']['name'][0];
 
     // $total = count($_FILES['files_upload']['name']);
 
