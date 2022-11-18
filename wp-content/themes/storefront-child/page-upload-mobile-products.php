@@ -153,7 +153,7 @@ $woocommerce = new Client(
 
             <div class="mt-3">
 
-                <div class="label-bold">Product Type</div>
+                <div class="label-bold">Product Type:</div>
                 <div class="margin:0.2rem 0 0 0;">
                     <input value="simple" class="form-check-input" type="radio" name="product-type" id="product-type-1"
                         checked>
