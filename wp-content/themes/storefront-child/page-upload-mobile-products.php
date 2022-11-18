@@ -532,7 +532,7 @@ for($i=0;$i<$number_of_options;$i++)
 
         })
 
-        $('.wp-price').change(function() {
+        $('.wp-price').keyup(function() {
 
             var is_same_price = $('input[name="is-same-price"]:checked').val();
 
