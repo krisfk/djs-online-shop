@@ -65,9 +65,7 @@ $prod_data = [
 			'id' => 3,
 		],
 	],
-    'manage_stock' => true,
-    'stock_quantity' => 9999,
-	'attributes'  => [
+    'attributes'  => [
 		[
 			'id'        => 3,
 			'variation' => true,
