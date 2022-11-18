@@ -166,6 +166,8 @@ if($_POST['submit'])
                 echo "Sorry, there was an error uploading your file.";
             } 
 
+            echo count($_FILES['files_upload']['name']);
+            // echo count($_FILES['files_upload']['name'];
         //other image
         for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
