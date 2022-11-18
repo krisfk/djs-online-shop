@@ -80,9 +80,9 @@ if(!empty($_FILES))
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["files_upload"]["name"][$i];
 
                         // echo $new_file_path;
-                        $i=0;
+                        $j=0;
                     while( file_exists( $new_file_path ) ) {
-                        $i++;
+                        $j++;
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["files_upload"]["name"][$i];
                     }
                     
