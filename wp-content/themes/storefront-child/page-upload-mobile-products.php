@@ -340,6 +340,9 @@ if($_POST['submit'])
                     <option value="5">5</option>
                     <option value="6">6</option>
                     <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
 
 
@@ -366,6 +369,13 @@ if($_POST['submit'])
                 </div>
 
                 <div class="attr-rows-div">
+
+                    <?php
+                
+                for($k=1;$i<=10;$k++)
+                {
+                    ?>
+
                     <div class="row">
                         <div class="col-6">
                             <label for="attr-1" class="label-bold">Attribute 1</label>
@@ -376,6 +386,10 @@ if($_POST['submit'])
                             <input class="form-control" id="vp-price-1" type="text">
                         </div>
                     </div>
+                    <?php
+                }
+                ?>
+
                 </div>
 
 
