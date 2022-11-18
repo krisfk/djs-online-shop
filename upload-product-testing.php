@@ -74,11 +74,12 @@ if(!empty($_FILES))
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                 // echo 1;
+                echo $_FILES["file_upload"]["name"][$i];
                         $wordpress_upload_dir = wp_upload_dir();
 
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
 
-                        echo $new_file_path;
+                        // echo $new_file_path;
                         $i=0;
                     while( file_exists( $new_file_path ) ) {
                         $i++;
