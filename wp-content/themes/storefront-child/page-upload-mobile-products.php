@@ -331,8 +331,8 @@ if($_POST['submit'])
             </div>
 
             <div class="mt-3">
-                <label class="label-bold" for="number-of-attr">Number of Attribute</label>
-                <select id="number-of-attr" class="form-select" aria-label="Default">
+                <label class="label-bold" for="number-of-options">Number of Option(s)</label>
+                <select id="number-of-options" class="form-select" aria-label="Default">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -354,7 +354,7 @@ if($_POST['submit'])
 
 
             <div class="mt-3">
-                <label class="label-bold" for="number-of-attr">Same Price For All Options</label>
+                <label class="label-bold" for="number-of-options">Same Price For All Options</label>
                 <div class="margin:0.2rem 0 0 0;">
                     <input value="yes" class="form-check-input" type="radio" name="is-same-price" id="is-same-price-1"
                         checked>
