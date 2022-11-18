@@ -58,16 +58,16 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 if(!empty($_FILES))
 {
 
-    // $total = count($_FILES['files_upload']['name']);
+    $total = count($_FILES['files_upload']['name']);
 
     // print_r($_FILES['files_upload']['name']);
-    // echo $total;
+    echo $total;
     // print_r($_FILES);
     // print_r()
     // if($_FILES["files_upload"]['size'])
     // {
 //  echo 999;
-        echo $_FILES["file_upload"]["name"][0];
+        // echo $_FILES["file_upload"]["name"][0];
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                         $wordpress_upload_dir = wp_upload_dir();
