@@ -16,6 +16,8 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 //   ]
 // );
 
+
+//simple
 // $data = [
 //     'name' => 'Premium Quality',
 //     'type' => 'simple',
@@ -41,6 +43,39 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 // ];
 
 // $woocommerce->post('products', $data);
+
+
+
+//variation
+
+
+$prod_data = [
+	'name'        => 'A great product',
+	'type'        => 'variable',
+	'description' => 'A very meaningful product description',
+	'images'      => [
+		[
+			'src'      => 'https://shop.local/path/to/image.jpg',
+			'position' => 0,
+		],
+	],
+	'categories'  => [
+		[
+			'id' => 1,
+		],
+	],
+	'attributes'  => [
+		[
+			'id'        => 5,
+			'variation' => true,
+			'visible'   => true,
+			'options'   => [ 'S', 'M', 'L' ],
+		],
+	],
+];
+
+$product = $this->woocommerce->post( 'products', $prod_data );
+
 
 ?>
 
