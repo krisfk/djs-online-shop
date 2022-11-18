@@ -48,4 +48,4 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 ?>
 
-<input type="file" accept="image/*" capture="camera" multiple>
+<input type="file" accept="image/*" multiple>
