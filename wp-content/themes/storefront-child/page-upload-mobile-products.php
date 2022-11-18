@@ -62,14 +62,14 @@ $prod_data = [
 	],
 	'categories'  => [
 		[
-			'id' => 1,
+			'id' => 3,
 		],
 	],
     'manage_stock' => true,
     'stock_quantity' => 9999,
 	'attributes'  => [
 		[
-			'id'        => 5,
+			'id'        => 3,
 			'variation' => true,
 			'visible'   => true,
 			'options'   => [ 'S', 'M', 'L' ],
