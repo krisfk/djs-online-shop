@@ -32,10 +32,10 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 // Load Composer autoloader.
 // @link https://github.com/brightnucleus/jasper-client/blob/master/tests/bootstrap.php#L55-L59
-// $autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
-// if ( is_readable( $autoloader ) ) {
-// 	require_once $autoloader;
-// }
+$autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
+if ( is_readable( $autoloader ) ) {
+	require_once $autoloader;
+}
 
 use Automattic\WooCommerce\Client;
 
