@@ -43,7 +43,7 @@ require_once('./wp-load.php');
 //WC_API_Client
 //http://www.kayli.me/djs-online-shop/wc-api/v3/products?filter[limit]=-1
 $woocommerce = new Client(
-	'http://www.kayli.me/djs-online-shop/',
+	'http://www.djs.com.hk',
 	'ck_5652ff4d3946a2318721aaff55cc71b0d35841c2',
 	'cs_4faf2b6d95dfa1e1655790bb266a4f2fcbb19cfe',
 	[
