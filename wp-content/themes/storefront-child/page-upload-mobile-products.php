@@ -133,16 +133,18 @@ if($_POST['submit'])
     $product_name=$_POST['product-name'];
     $short_product_description=$_POST['product-description'];
     $product_type=$_POST['product-type'];
-    $price=$_POST['price'];
+    $price=$_POST['product-price'];
 
-    echo $product_name;
-    echo '<br>';
-    echo $short_product_description;
-    echo '<br>';
-    echo $product_type;
-    echo '<br>';
-    echo $price;
-    echo '<br>';
+    // echo $product_name;
+    // echo '<br>';
+    // echo $short_product_description;
+    // echo '<br>';
+    // echo $product_type;
+    // echo '<br>';
+    // echo $price;
+    // echo '<br>';
+
+    
     
 
 }
@@ -157,26 +159,26 @@ if($_POST['submit'])
             <h4 class="text-center">Djs Web Product Upload Via Mobile</h4>
 
             <div class="mt-4">
-                <label class="label-bold" for="product-name">Product Name:</label>
+                <label class="label-bold" for="product-name">*Product Name:</label>
                 <input type="text" class="form-control" name="product-name" id="product-name">
             </div>
 
             <div class="mt-3">
                 <div>
-                    <label class="label-bold" for="file-upload">Product Images:</label>
+                    <label class="label-bold" for="file-upload">*Product Images:</label>
                 </div>
                 <input type="file" name="files_upload[]" id="file-upload" accept=".jpg" multiple>
             </div>
 
             <div class="mt-3">
-                <label class="label-bold" for="product-description">Product Description:<br>(如用default文字留返一點係度)</label>
+                <label class="label-bold" for="product-description">*Product Description:<br>(如用default文字留返一點係度)</label>
                 <textarea type="text" class="form-control" name="product-description" rows="4" cols="50"
                     id="product-description">.</textarea>
             </div>
 
             <div class="mt-3">
 
-                <div class="label-bold">Product Type:</div>
+                <div class="label-bold">*Product Type:</div>
                 <div class="margin:0.2rem 0 0 0;">
                     <input value="simple" class="form-check-input" type="radio" name="product-type" id="product-type-1"
                         checked>
@@ -193,7 +195,7 @@ if($_POST['submit'])
             </div>
 
             <div class="mt-3">
-                <label class="label-bold" for="product-price">Product Price:</label>
+                <label class="label-bold" for="product-price">*Product Price:</label>
                 <input type="number" pattern="\d*" class="form-control" name="product-price" id="product-price">
             </div>
 
