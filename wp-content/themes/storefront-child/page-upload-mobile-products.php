@@ -75,6 +75,9 @@ $prod_data = [
 	],
 ];
 
+$woocommerce->post( 'products', $prod_data );
+
+
 // $product = $woocommerce->post( 'products', $prod_data );
 
 // $variation_data = [
