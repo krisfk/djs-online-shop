@@ -77,20 +77,20 @@ $prod_data = [
 
 $product = $woocommerce->post( 'products', $prod_data );
 
-$variation_data = [
-	'regular_price' => '15.00',
-	'image'         => [
-		'src' => 'https://shop.local/path/to/image_size_l.jpg',
-	],
-	'attributes'    => [
-		[
-			'id'     => 5,
-			'option' => 'L',
-		],
-	],
-];
+// $variation_data = [
+// 	'regular_price' => '15.00',
+// 	'image'         => [
+// 		'src' => 'https://shop.local/path/to/image_size_l.jpg',
+// 	],
+// 	'attributes'    => [
+// 		[
+// 			'id'     => 5,
+// 			'option' => 'L',
+// 		],
+// 	],
+// ];
 
-$woocommerce->post( "products/$product->id/variations", $variation_data );
+// $woocommerce->post( "products/$product->id/variations", $variation_data );
 
 
 
