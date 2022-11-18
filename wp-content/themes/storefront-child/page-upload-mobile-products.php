@@ -85,6 +85,8 @@ $prod_data = [
             'regular_price' => '29.98',
             'attributes' => array( 
                 array( 
+                    'id' => date('YmdHis', strtotime('+2 seconds')),
+                    'slug'=>'color',
                     'name'=>'color',
                     'options'=>'red'
                 )
@@ -96,6 +98,8 @@ $prod_data = [
             'regular_price' => '29.98',
             'attributes' => array( 
                 array( 
+                    'id' => date('YmdHis', strtotime('+2 seconds')),
+                    'slug'=>'color',
                     'name'=>'color',
                     'options'=>'black'
                 )
