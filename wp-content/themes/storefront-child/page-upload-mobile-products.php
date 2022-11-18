@@ -157,7 +157,7 @@ if($_POST['submit'])
             </div>
 
             <div class="mt-3">
-                <label class="label-bold" for="product-description">Product Description:(如用default文字留返一點「.」係度)</label>
+                <label class="label-bold" for="product-description">Product Description:(如用default文字留返一點 "." 係度)</label>
                 <input type="text" class="form-control" name="product-description" id="product-description" value=".">
             </div>
 
