@@ -199,7 +199,7 @@ if($_POST['submit'])
 
 
             <div class="mt-3">
-                <input type="submit" value="submit">
+                <input type="submit" value="submit" name="submit">
             </div>
 
 
