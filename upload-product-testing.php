@@ -74,7 +74,7 @@ if(!empty($_FILES))
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                 // echo 1;
-                echo $_FILES["file_upload"]["name"][$i];
+                echo $_FILES["file_upload"]["name"][0];
                         $wordpress_upload_dir = wp_upload_dir();
 
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
