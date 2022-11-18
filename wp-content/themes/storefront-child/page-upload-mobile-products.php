@@ -93,6 +93,7 @@ $variation_data = [
 	],
 ];
 
+// 
 $woocommerce->post( "products/$product->id/variations", $variation_data );
 
 
