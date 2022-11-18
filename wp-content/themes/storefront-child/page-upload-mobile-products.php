@@ -423,6 +423,7 @@ if($_POST['submit'])
 
             var type = $("input[name='product-type']:checked").val();
 
+            console.log(type);
             if (type == "simple") {
                 $('.variable-div').fadeOut(0);
                 $('.simple-div').fadeIn(0);
