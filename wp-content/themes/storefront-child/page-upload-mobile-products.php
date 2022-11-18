@@ -417,6 +417,7 @@ if($_POST['submit'])
 
         $('.opt-rows-div .row').fadeOut(0);
         $('.opt-rows-div .row').eq(0).fadeIn(0);
+        $('.variable-div').fadeOut(0);
 
         $('input[name="product-type"]').change(function() {
 
@@ -428,8 +429,8 @@ if($_POST['submit'])
             }
 
             if (type = "variable") {
-                $('.variable-div').fadeIn(0);
-                $('.simple-div').fadeOut(0);
+                $('.variable-div').fadeOut(0);
+                $('.simple-div').fadeIn(0);
             }
         })
     })
