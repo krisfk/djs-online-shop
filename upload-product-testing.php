@@ -90,7 +90,8 @@ if(!empty($_FILES))
 
                         $upload_id = wp_insert_attachment( array(
                         'guid'           => $new_file_path, 
-                        'post_mime_type' => 'image/*',
+                        // 'post_mime_type' => 'image/*',
+                        'post_mime_type' => 'any',
                         //$_FILES["file_upload"]["tmp_name"],
                         'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["files_upload"]["name"][$i] ),
                         'post_content'   => '',
