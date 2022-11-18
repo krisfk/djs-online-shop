@@ -6,7 +6,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 // 
 
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '../../../vendor/autoload.php';
 
 use Automattic\WooCommerce\Client;
 
