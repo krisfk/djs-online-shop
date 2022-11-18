@@ -421,7 +421,7 @@ if($_POST['submit'])
         $('input[name="product-type"]').change(function() {
 
             // alert($('input[name="product-type"]').val());
-            console.log($("input[name='product-type']").val());
+            console.log($("input[name='product-type']:checked").val());
         })
     })
     </script>
