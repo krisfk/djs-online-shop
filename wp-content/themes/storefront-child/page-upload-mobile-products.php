@@ -121,6 +121,9 @@ $woocommerce = new Client(
     </script>
     <link rel="stylesheet" href="<?php echo get_site_url();?>/product-upload.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -362,19 +365,18 @@ if($_POST['submit'])
                     </label>
                 </div>
 
-                <div class="row">
-
-                    <div class="col-6">
-                        <label for="attr-1" class="label-bold">Attribute 1</label>
-                        <input class="form-control" id="attr-1" type="text">
+                <div class="attr-rows-div">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="attr-1" class="label-bold">Attribute 1</label>
+                            <input class="form-control" id="attr-1" type="text">
+                        </div>
+                        <div class="col-6">
+                            <label for="vp-price-1" class="label-bold">Price</label>
+                            <input class="form-control" id="vp-price-1" type="text">
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <label for="vp-price-1" class="label-bold">Price</label>
-                        <input class="form-control" id="vp-price-1" type="text">
-                    </div>
-
                 </div>
-
 
 
 
