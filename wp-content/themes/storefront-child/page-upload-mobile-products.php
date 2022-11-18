@@ -376,7 +376,7 @@ if($_POST['submit'])
                 {
                     ?>
 
-                    <div class="row">
+                    <div class="row mb-2">
                         <div class="col-6">
                             <label for="attr-<?php echo $k;?>" class="label-bold">Attribute <?php echo $k;?></label>
                             <input class="form-control" id="attr-<?php echo $k;?>" type="text">
