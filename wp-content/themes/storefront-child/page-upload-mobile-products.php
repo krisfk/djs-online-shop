@@ -169,7 +169,10 @@ if($_POST['submit'])
             echo count($_FILES['files_upload']['name']);
             // echo count($_FILES['files_upload']['name'];
         //other image
-        echo $_FILES['files_upload']['name'][0];
+        if($_FILES['files_upload']['name'][0])
+        {
+
+        
         for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                         $wordpress_upload_dir = wp_upload_dir();
@@ -199,6 +202,7 @@ if($_POST['submit'])
                     }  
             }
 
+        }
             
         
 
