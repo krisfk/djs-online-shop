@@ -81,18 +81,18 @@ $woocommerce = new Client(
 
 // $product = $woocommerce->post( 'products', $prod_data );
 
-// $variation_data = [
-// 	'regular_price' => '15.00',
-// 	// 'image'         => [
-// 	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
-// 	// ],
-// 	'attributes'    => [
-// 		[
-// 			'id'     => 3,
-// 			'option' => 'L',
-// 		],
-// 	],
-// ];
+$variation_data = [
+	'regular_price' => '15.00',
+	// 'image'         => [
+	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
+	// ],
+	'attributes'    => [
+		[
+			'id'     => 3,
+			'option' => 'L',
+		],
+	],
+];
 
 // // 
 // $woocommerce->post( "products/$product->id/variations", $variation_data );
@@ -132,7 +132,7 @@ $woocommerce = new Client(
     <?php
 
 
-
+$upload_to_cate_id = 376;
 
 
 if($_POST['submit'])
@@ -232,6 +232,23 @@ if($_POST['submit'])
     $price=$_POST['product-price'];
 
 
+    $number_of_options=$_POST['number-of-options'];
+
+    $option_arr=[];
+    $option_price_arr=[];
+    
+    for($i=1;$i<=$number_of_options;$i++)
+    {
+        array_push($option_arr,$_POST['opt-'.$i]);
+    }
+
+
+    for($i=1;$i<=$number_of_options;$i++)
+    {
+        array_push($option_price_arr,$_POST['vp-price-'.$i]);
+    }
+    
+
         
     if($product_type='simple')
     {
@@ -242,7 +259,7 @@ if($_POST['submit'])
         'short_description' => $short_product_description,
         'categories' => [
             [
-                'id' => 376
+                'id' => $upload_to_cate_id
             ]
         ],
         'images' => $product_img_arr
@@ -256,7 +273,67 @@ if($_POST['submit'])
 
     if($product_type='variable')
     {
-        
+     
+        $data = [
+	'name'        => $product_name,
+	'type'        => 'variable',
+    'short_description' =>$short_product_description,
+	'images'      => $product_img_arr,
+	'categories'  => [
+		[
+			'id' => $upload_to_cate_id,
+		],
+	],
+	'attributes'  => [
+		[
+			'id'        => 3,
+			'variation' => true,
+			'visible'   => true,
+			'options'   => $option_arr,
+		],
+	],
+];
+
+$product = $woocommerce->post( 'products', $data );
+
+// $variation_data =[];
+
+for($i=0;$i<$number_of_options;$i++)
+{
+        $variation_data = [
+        	'regular_price' => $option_price_arr[$i],
+        	'attributes'    => [
+        		[
+        			'id'     => 3,
+        			'option' => $option_arr[$i],
+        		],
+        	],
+        ];
+        $woocommerce->post( "products/$product->id/variations", $variation_data );
+}
+
+// $variation_data = [
+// 	'regular_price' => '15.00',
+// 	'attributes'    => [
+// 		[
+// 			'id'     => 3,
+// 			'option' => 'L',
+// 		],
+// 	],
+// ];
+
+// 
+
+           // echo $product_name;
+            // echo '<br>';
+            // echo $short_product_description;
+            // echo '<br>';
+            // echo $product_type;
+            // echo '<br>';
+            // echo $price;
+            // echo '<br>';
+
+            
     }
 
     // echo $product_name;
