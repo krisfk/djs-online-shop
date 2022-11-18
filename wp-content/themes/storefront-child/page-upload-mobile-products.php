@@ -338,15 +338,16 @@ if($product_type='simple')
 
 if(!empty($_FILES))
 {
+    echo count($_FILES['files_upload']['name']);
 
-    $total = count($_FILES['files_upload']['name']);
+    // $total = count($_FILES['files_upload']['name']);
 
     // echo $total;
     // print_r($_FILES);
     // print_r()
     // if($_FILES["files_upload"]['size'])
     // {
-            $wordpress_upload_dir = wp_upload_dir();
+            // $wordpress_upload_dir = wp_upload_dir();
 
 
             // $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"];
