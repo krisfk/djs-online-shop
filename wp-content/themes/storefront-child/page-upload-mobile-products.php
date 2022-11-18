@@ -54,6 +54,7 @@ $prod_data = [
 	'name'        => 'A great product',
 	'type'        => 'variable',
 	'description' => 'A very meaningful product description',
+    'short_description' =>'.',
 	'images'      => [
 		[
 			'src'      => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
