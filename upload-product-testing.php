@@ -37,7 +37,7 @@ require_once('./wp-load.php');
 // 	require_once $autoloader;
 // }
 
-// use Automattic\WooCommerce\Client;
+use Automattic\WooCommerce\Client;
 
 
 //WC_API_Client
