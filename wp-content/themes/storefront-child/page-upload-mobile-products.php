@@ -56,7 +56,7 @@ $prod_data = [
 	'description' => 'A very meaningful product description',
 	'images'      => [
 		[
-			'src'      => 'https://shop.local/path/to/image.jpg',
+			'src'      => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
 			'position' => 0,
 		],
 	],
@@ -75,25 +75,25 @@ $prod_data = [
 	],
 ];
 
-$woocommerce->post( 'products', $prod_data );
 
 
-// $product = $woocommerce->post( 'products', $prod_data );
 
-// $variation_data = [
-// 	'regular_price' => '15.00',
-// 	'image'         => [
-// 		'src' => 'https://shop.local/path/to/image_size_l.jpg',
-// 	],
-// 	'attributes'    => [
-// 		[
-// 			'id'     => 5,
-// 			'option' => 'L',
-// 		],
-// 	],
-// ];
+$product = $woocommerce->post( 'products', $prod_data );
 
-// $woocommerce->post( "products/$product->id/variations", $variation_data );
+$variation_data = [
+	'regular_price' => '15.00',
+	'image'         => [
+		'src' => 'https://shop.local/path/to/image_size_l.jpg',
+	],
+	'attributes'    => [
+		[
+			'id'     => 5,
+			'option' => 'L',
+		],
+	],
+];
+
+$woocommerce->post( "products/$product->id/variations", $variation_data );
 
 
 
