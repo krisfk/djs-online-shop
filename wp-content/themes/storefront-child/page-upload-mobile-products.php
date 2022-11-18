@@ -134,10 +134,22 @@ $woocommerce = new Client(
 
             <h4>djs product upload by mobile</h4>
 
-            <div>
+            <div class="mt-4">
                 <label for="product-name">Product Name:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="product-name">
             </div>
+
+            <div class="mt-4">
+                <label for="product-images">Product Images:</label>
+                <input type="file" name="files_upload[]" id="file_upload" accept=".jpg" multiple>
+            </div>
+
+            <div class="mt-4">
+                <label for="product-description">Product Description:</label>
+                <input type="text" class="form-control" name="product-description">
+            </div>
+
+
 
         </div>
 
