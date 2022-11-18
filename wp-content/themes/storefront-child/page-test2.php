@@ -59,11 +59,12 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 if(!empty($_FILES))
 {
 
+    print_r($_FILES);
     if($_FILES["file_upload"]['size'])
     {
             $wordpress_upload_dir = wp_upload_dir();
 
-            print_r($_FILES);
+
             // $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"];
 
             //     $i=0;
