@@ -158,12 +158,12 @@ $woocommerce = new Client(
                     <input value="simple" class="form-check-input" type="radio" name="product-type" id="product-type-1"
                         checked>
                     <label class="form-check-label" for="product-type-1">
-                        simple
+                        Simple
                     </label>
                     <input value="variable" class="form-check-input" type="radio" name="product-type"
                         id="product-type-2">
                     <label class="form-check-label" for="product-type-2">
-                        variable
+                        Variable
                     </label>
                 </div>
 
