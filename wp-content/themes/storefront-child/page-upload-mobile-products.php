@@ -153,15 +153,17 @@ $woocommerce = new Client(
 
             <div class="mt-4">
 
-                <input class="form-check-input" type="radio" name="product-type" id="product-type-1">
-                <label class="form-check-label" for="product-type-1">
-                    simple
-                </label>
-                <input class="form-check-input" type="radio" name="product-type" id="product-type-2" checked>
-                <label class="form-check-label" for="product-type-2">
-                    variable
-                </label>
-
+                <div>Product Type</div>
+                <div class="margin:0.2rem 0 0 0;">
+                    <input class="form-check-input" type="radio" name="product-type" id="product-type-1">
+                    <label class="form-check-label" for="product-type-1">
+                        simple
+                    </label>
+                    <input class="form-check-input" type="radio" name="product-type" id="product-type-2" checked>
+                    <label class="form-check-label" for="product-type-2">
+                        variable
+                    </label>
+                </div>
 
             </div>
 
