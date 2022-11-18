@@ -47,7 +47,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 <form action="" method="post" enctype="multipart/form-data">
     <!-- <input type="file" accept="image/*" multiple> -->
-    <input type="file" name="file_upload" id="file_upload" accept=".jpg">
+    <input type="file" name="file_upload" id="file_upload" accept=".jpg" multiple>
     <input type="submit" value="submit">
 </form>
 <?php
@@ -55,7 +55,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 
 
-echo 22;
+// echo 22;
 if(!empty($_FILES))
 {
     echo 11;
