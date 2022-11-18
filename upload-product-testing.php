@@ -60,7 +60,8 @@ if(!empty($_FILES))
 
     $total = count($_FILES['files_upload']['name']);
 
-    echo $total;
+    print_r($_FILES['files_upload']['name']);
+    // echo $total;
     // print_r($_FILES);
     // print_r()
     // if($_FILES["files_upload"]['size'])
