@@ -47,7 +47,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 <form action="" method="post" enctype="multipart/form-data">
     <!-- <input type="file" accept="image/*" multiple> -->
-    <input type="file" name="file_upload[]" id="file_upload" accept=".jpg" multiple>
+    <input type="file" name="files_upload[]" id="file_upload" accept=".jpg" multiple>
     <input type="submit" value="submit">
 </form>
 <?php
@@ -59,10 +59,13 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 if(!empty($_FILES))
 {
 
-    print_r($_FILES);
+    $total = count($_FILES['files_upload']['name']);
+
+    echo $total;
+    // print_r($_FILES);
     // print_r()
-    if($_FILES["file_upload"]['size'])
-    {
+    // if($_FILES["files_upload"]['size'])
+    // {
             $wordpress_upload_dir = wp_upload_dir();
 
 
@@ -96,9 +99,9 @@ if(!empty($_FILES))
             // } else {
             //     echo "Sorry, there was an error uploading your file.";
             // }        
-    }
+    // }
 
-    echo $new_file_path;
+    // echo $new_file_path;
 }
 
 
