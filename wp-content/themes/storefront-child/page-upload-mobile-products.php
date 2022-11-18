@@ -335,7 +335,7 @@ if($_POST['submit'])
             <div class="variable-div">
                 <div class="mt-3">
                     <label class="label-bold" for="number-of-options">Number of Option(s):</label>
-                    <select id="number-of-options" class="form-select" aria-label="Default">
+                    <select id="number-of-options" class="form-select" aria-label="Default" name="number-of-options">
                         <option selected value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -433,6 +433,13 @@ if($_POST['submit'])
                 $('.variable-div').fadeIn(0);
                 $('.simple-div').fadeOut(0);
             }
+        })
+
+        $('.number-of-options').change(function() {
+
+            var num = $('.number-of-options').val();
+
+
         })
     })
     </script>
