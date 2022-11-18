@@ -435,9 +435,10 @@ if($_POST['submit'])
             }
         })
 
-        $('.number-of-options').change(function() {
+        $('#number-of-options').change(function() {
 
-            var num = $('.number-of-options').val();
+            var num = $('#number-of-options').val();
+
 
             $('.opt-rows-div .row').fadeOut(0);
 
