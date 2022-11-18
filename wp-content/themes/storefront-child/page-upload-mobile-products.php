@@ -372,7 +372,7 @@ if($_POST['submit'])
 
                     <?php
                 
-                for($k=1;$i<=10;$k++)
+                for($k=1;$k<=10;$k++)
                 {
                     ?>
 
