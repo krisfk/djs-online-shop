@@ -341,7 +341,30 @@ if($_POST['submit'])
 
 
 
+
+
             </div>
+
+
+
+            <div class="mt-3">
+                <label class="label-bold" for="number-of-attr">Same Price For All Options</label>
+                <div class="margin:0.2rem 0 0 0;">
+                    <input value="yes" class="form-check-input" type="radio" name="product-type" id="product-type-1"
+                        checked>
+                    <label class="form-check-label" for="product-type-1">
+                        Yes
+                    </label>
+                    <input value="no" class="form-check-input" type="radio" name="product-type" id="product-type-2">
+                    <label class="form-check-label" for="product-type-2">
+                        No
+                    </label>
+                </div>
+
+
+
+            </div>
+
 
 
             <div class="mt-3">
