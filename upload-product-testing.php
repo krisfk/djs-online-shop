@@ -83,7 +83,7 @@ if(!empty($_FILES))
                         $j=0;
                     while( file_exists( $new_file_path ) ) {
                         $j++;
-                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["files_upload"]["name"][$i];
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["files_upload"]["name"][$i];
                     }
                     
                     if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
