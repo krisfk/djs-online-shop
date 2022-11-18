@@ -465,7 +465,7 @@ for($i=0;$i<$number_of_options;$i++)
                             <div class="col-6">
                                 <label for="vp-price-<?php echo $k;?>" class="label-bold">*Price</label>
                                 <input class="form-control wp-price" id="vp-price-<?php echo $k;?>"
-                                    name="vp-price-<?php echo $k;?>" type="text">
+                                    name="vp-price-<?php echo $k;?>" type="number" pattern="\d*">
                             </div>
                         </div>
                         <?php
