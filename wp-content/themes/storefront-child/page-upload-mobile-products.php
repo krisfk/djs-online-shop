@@ -197,11 +197,18 @@ $woocommerce->post('products', $data);
                 <input type="text" class="form-control" name="product-name" id="product-name">
             </div>
 
+
             <div class="mt-3">
                 <div>
-                    <label class="label-bold" for="file-upload">*Product Images:</label>
+                    <label class="label-bold" for="file-upload-1">*Product Image(Cover Image):</label>
                 </div>
-                <input type="file" name="files_upload[]" id="file-upload" accept=".jpg" multiple>
+                <input type="file" name="file_upload" id="file-upload-1" accept=".jpg">
+            </div>
+            <div class="mt-3">
+                <div>
+                    <label class="label-bold" for="file-upload-2">*Product Images:</label>
+                </div>
+                <input type="file" name="files_upload[]" id="file-upload-2" accept=".jpg" multiple>
             </div>
 
             <div class="mt-3">
