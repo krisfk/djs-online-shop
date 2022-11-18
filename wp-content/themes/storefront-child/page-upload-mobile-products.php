@@ -330,9 +330,13 @@ if($_POST['submit'])
             <div class="mt-3">
                 <label class="label-bold" for="number-of-attr">Number of Attribute</label>
                 <select id="number-of-attr" class="form-select" aria-label="Default">
-                    <option selected>1</option>
+                    <option selected value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
                 </select>
 
 
