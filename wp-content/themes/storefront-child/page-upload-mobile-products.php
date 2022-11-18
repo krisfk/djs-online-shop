@@ -65,7 +65,10 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 <body>
 
-    <div class="container"></div>
+    <h1>djs product upload by mobile</h1>
+    <div class="container">
+
+    </div>
 </body>
 
 </html>
