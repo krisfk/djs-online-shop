@@ -50,7 +50,7 @@ ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱
 
 <form action="" method="post" enctype="multipart/form-data">
     <!-- <input type="file" accept="image/*" multiple> -->
-    <input type="file" name="files_upload[]" id="file_upload" accept=".jpg" multiple>
+    <input type="file" name="files_upload[]" id="files_upload" accept=".jpg" multiple>
     <input type="submit" value="submit">
 </form>
 <?php
@@ -74,25 +74,25 @@ if(!empty($_FILES))
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                 // echo 1;
-                echo $_FILES["file_upload"]["name"][0];
+                // echo $_FILES["file_upload"]["name"][0];
                         $wordpress_upload_dir = wp_upload_dir();
 
-                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["files_upload"]["name"][$i];
 
                         // echo $new_file_path;
                         $i=0;
                     while( file_exists( $new_file_path ) ) {
                         $i++;
-                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["file_upload"]["name"][$i];
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $i . '_' . $_FILES["files_upload"]["name"][$i];
                     }
                     
-                    if (move_uploaded_file($_FILES["file_upload"]["tmp_name"][$i], $new_file_path)) {
+                    if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
 
                         $upload_id = wp_insert_attachment( array(
                         'guid'           => $new_file_path, 
                         'post_mime_type' => 'image/*',
                         //$_FILES["file_upload"]["tmp_name"],
-                        'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"][$i] ),
+                        'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["files_upload"]["name"][$i] ),
                         'post_content'   => '',
                         'post_status'    => 'inherit'
                     ), $new_file_path );
