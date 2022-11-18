@@ -66,7 +66,7 @@ if(!empty($_FILES))
     // print_r()
     // if($_FILES["files_upload"]['size'])
     // {
- 
+ echo 999;
         echo $_FILES["file_upload"]["name"][0];
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
@@ -106,6 +106,8 @@ if(!empty($_FILES))
 
             }
 
+
+            
             // $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"];
 
             //     $i=0;
