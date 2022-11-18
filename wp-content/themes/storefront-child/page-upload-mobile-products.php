@@ -229,26 +229,32 @@ if($_POST['submit'])
     $price=$_POST['product-price'];
 
 
+        
+    if($product_type='simple')
+    {
+        $data = [
+        'name' => $product_name,
+        'type' => 'simple',
+        'regular_price' => $price,
+        'short_description' => $short_product_description,
+        'categories' => [
+            [
+                'id' => 376
+            ]
+        ],
+        'images' => $product_img_arr
+        ];
+
+    $woocommerce->post('products', $data);
+
     
-if($product_type='simple')
-{
-    $data = [
-    'name' => $product_name,
-    'type' => 'simple',
-    'regular_price' => $price,
-    'short_description' => $short_product_description,
-    'categories' => [
-        [
-            'id' => 376
-        ]
-    ],
-    'images' => $product_img_arr
-    ];
+    }
 
-$woocommerce->post('products', $data);
 
-   
-}
+    if($product_type='variable')
+    {
+        
+    }
 
     // echo $product_name;
     // echo '<br>';
@@ -319,6 +325,18 @@ $woocommerce->post('products', $data);
             <div class="mt-3">
                 <label class="label-bold" for="product-price">*Product Price:</label>
                 <input type="number" pattern="\d*" class="form-control" name="product-price" id="product-price">
+            </div>
+
+            <div class="mt-3">
+                <label class="label-bold" for="number-of-attr">Number of Attribute</label>
+                <select id="number-of-attr" class="form-select" aria-label="Default">
+                    <option selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+
+
             </div>
 
 
