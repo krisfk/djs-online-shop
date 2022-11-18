@@ -67,7 +67,7 @@ $prod_data = [
 	],
 	'attributes'  => [
 		[
-			'id'        => 5,
+			'id'        => 3,
 			'variation' => true,
 			'visible'   => true,
 			'options'   => [ 'S', 'M', 'L' ],
@@ -87,7 +87,7 @@ $variation_data = [
 	],
 	'attributes'    => [
 		[
-			'id'     => 5,
+			'id'     => 3,
 			'option' => 'L',
 		],
 	],
