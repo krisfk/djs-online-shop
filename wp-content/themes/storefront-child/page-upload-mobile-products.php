@@ -313,7 +313,7 @@ if($_POST['submit'])
                     <label class="form-check-label" for="product-type-1">
                         Simple
                     </label>
-                    <input value="variable" class="form-check-input" type="radio" name="product-type"
+                    <input value="variable" class="form-check-input ms-3" type="radio" name="product-type"
                         id="product-type-2">
                     <label class="form-check-label" for="product-type-2">
                         Variable
@@ -355,7 +355,8 @@ if($_POST['submit'])
                     <label class="form-check-label" for="is-same-price-1">
                         Yes
                     </label>
-                    <input value="no" class="form-check-input" type="radio" name="is-same-price" id="is-same-price-2">
+                    <input value="no" class="form-check-input  ms-3" type="radio" name="is-same-price"
+                        id="is-same-price-2">
                     <label class="form-check-label" for="is-same-price-2">
                         No
                     </label>
