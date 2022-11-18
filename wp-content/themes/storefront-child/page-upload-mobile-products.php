@@ -46,57 +46,59 @@ $woocommerce = new Client(
 // $woocommerce->post('products', $data);
 
 
-
+//////////////////////////////////
 //variation
 
 
-$prod_data = [
-	'name'        => 'A great product',
-	'type'        => 'variable',
-	'description' => 'A very meaningful product description',
-    'short_description' =>'.',
-	'images'      => [
-		[
-			'src'      => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
-			'position' => 0,
-		],
-	],
-	'categories'  => [
-		[
-			'id' => 1,
-		],
-	],
-	'attributes'  => [
-		[
-			'id'        => 3,
-			'variation' => true,
-			'visible'   => true,
-			'options'   => [ 'S', 'M', 'L' ],
-		],
-	],
-];
+// $prod_data = [
+// 	'name'        => 'A great product',
+// 	'type'        => 'variable',
+// 	'description' => 'A very meaningful product description',
+//     'short_description' =>'.',
+// 	'images'      => [
+// 		[
+// 			'src'      => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
+// 			'position' => 0,
+// 		],
+// 	],
+// 	'categories'  => [
+// 		[
+// 			'id' => 1,
+// 		],
+// 	],
+// 	'attributes'  => [
+// 		[
+// 			'id'        => 3,
+// 			'variation' => true,
+// 			'visible'   => true,
+// 			'options'   => [ 'S', 'M', 'L' ],
+// 		],
+// 	],
+// ];
 
 
 
 
-$product = $woocommerce->post( 'products', $prod_data );
+// $product = $woocommerce->post( 'products', $prod_data );
 
-$variation_data = [
-	'regular_price' => '15.00',
-	// 'image'         => [
-	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
-	// ],
-	'attributes'    => [
-		[
-			'id'     => 3,
-			'option' => 'L',
-		],
-	],
-];
+// $variation_data = [
+// 	'regular_price' => '15.00',
+// 	// 'image'         => [
+// 	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
+// 	// ],
+// 	'attributes'    => [
+// 		[
+// 			'id'     => 3,
+// 			'option' => 'L',
+// 		],
+// 	],
+// ];
 
-// 
-$woocommerce->post( "products/$product->id/variations", $variation_data );
+// // 
+// $woocommerce->post( "products/$product->id/variations", $variation_data );
 
+
+///////////////////////
 
 
 
@@ -123,13 +125,23 @@ $woocommerce->post( "products/$product->id/variations", $variation_data );
 
 <body>
 
-    <h1>djs product upload by mobile</h1>
+    <h3>djs product upload by mobile</h3>
+
+
     <div class="container">
 
+
+        <div>
+            <label for="product-name">Product Name:</label>
+            <input type="text" class="form-control">
+        </div>
+
     </div>
+
 </body>
 
 </html>
+
 
 
 
