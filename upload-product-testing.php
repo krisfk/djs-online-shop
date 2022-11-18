@@ -30,6 +30,8 @@ $data = [
     ]
 ];
 
-print_r($woocommerce->post('products', $data));
+$woocommerce->post('products', $data);
+
+// print_r($woocommerce->post('products', $data));
 
 ?>
