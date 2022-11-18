@@ -138,7 +138,12 @@ if($_POST['submit'])
     if(!empty($_FILES))
     {
 
+
+        $product_img_arr=[];
+        // ['src'=>'']
         //cover image
+        // array_push();
+
             $wordpress_upload_dir = wp_upload_dir();
 
                 $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"];
@@ -147,7 +152,9 @@ if($_POST['submit'])
                 $j++;
                 $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["file_upload"]["name"];
             }
-            echo $new_file_path;
+            // echo $new_file_path;
+
+            array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
             
             if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
 
@@ -166,7 +173,7 @@ if($_POST['submit'])
                 echo "Sorry, there was an error uploading your file.";
             } 
 
-            echo count($_FILES['files_upload']['name']);
+            // echo count($_FILES['files_upload']['name']);
             // echo count($_FILES['files_upload']['name'];
         //other image
         if($_FILES['files_upload']['name'][0])
@@ -203,6 +210,9 @@ if($_POST['submit'])
             }
 
         }
+
+
+        print_r($product_img_arr);
             
         
 
