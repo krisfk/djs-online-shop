@@ -83,11 +83,6 @@ if(!empty($_FILES))
                     require_once( ABSPATH . 'wp-admin/includes/image.php' );
 
                     wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
-                    //  conclude Image
-
-                    // update_field( 'conclude_image', $upload_id, $school_id );
-                    
-                    // conclusion_content
                 
                     } else {
                         echo "Sorry, there was an error uploading your file.";

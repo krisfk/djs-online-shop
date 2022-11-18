@@ -128,8 +128,80 @@ $woocommerce = new Client(
 
     <?php
 
+
+
+
+
 if($_POST['submit'])
 {
+
+    if(!empty($_FILES))
+    {
+
+        //cover image
+            $wordpress_upload_dir = wp_upload_dir();
+
+                $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"];
+                $j=0;
+            while( file_exists( $new_file_path ) ) {
+                $j++;
+                $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["file_upload"]["name"];
+            }
+            echo $new_file_path;
+            
+            if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
+
+                $upload_id = wp_insert_attachment( array(
+                'guid'           => $new_file_path, 
+                'post_mime_type' => 'image/*',
+                'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"] ),
+                'post_content'   => '',
+                'post_status'    => 'inherit'
+            ), $new_file_path );
+            require_once( ABSPATH . 'wp-admin/includes/image.php' );
+
+            wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            } 
+
+        //other image
+        for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
+            {
+                        $wordpress_upload_dir = wp_upload_dir();
+
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["files_upload"]["name"][$i];
+                        $j=0;
+                    while( file_exists( $new_file_path ) ) {
+                        $j++;
+                        $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["files_upload"]["name"][$i];
+                    }
+                    
+                    if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
+
+                        $upload_id = wp_insert_attachment( array(
+                        'guid'           => $new_file_path, 
+                        'post_mime_type' => 'image/*',
+                        'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["files_upload"]["name"][$i] ),
+                        'post_content'   => '',
+                        'post_status'    => 'inherit'
+                    ), $new_file_path );
+                    require_once( ABSPATH . 'wp-admin/includes/image.php' );
+
+                    wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+                
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }  
+            }
+
+            
+        
+
+    }
+
+
     $product_name=$_POST['product-name'];
     $short_product_description=$_POST['product-description'];
     $product_type=$_POST['product-type'];
@@ -206,7 +278,7 @@ $woocommerce->post('products', $data);
             </div>
             <div class="mt-3">
                 <div>
-                    <label class="label-bold" for="file-upload-2">*Product Images:</label>
+                    <label class="label-bold" for="file-upload-2">Product Images:</label>
                 </div>
                 <input type="file" name="files_upload[]" id="file-upload-2" accept=".jpg" multiple>
             </div>
