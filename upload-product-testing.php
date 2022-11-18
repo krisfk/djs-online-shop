@@ -67,6 +67,7 @@ if(!empty($_FILES))
     // if($_FILES["files_upload"]['size'])
     // {
  
+        echo $_FILES["file_upload"]["name"][0];
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
                         $wordpress_upload_dir = wp_upload_dir();
