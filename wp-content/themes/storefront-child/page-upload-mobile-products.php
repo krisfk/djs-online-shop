@@ -325,79 +325,82 @@ if($_POST['submit'])
 
             </div>
 
-            <div class="mt-3">
-                <label class="label-bold" for="product-price">*Product Price:</label>
-                <input type="number" pattern="\d*" class="form-control" name="product-price" id="product-price">
+            <div class="simple-div">
+                <div class="mt-3">
+                    <label class="label-bold" for="product-price">*Product Price:</label>
+                    <input type="number" pattern="\d*" class="form-control" name="product-price" id="product-price">
+                </div>
             </div>
 
-            <div class="mt-3">
-                <label class="label-bold" for="number-of-options">Number of Option(s)</label>
-                <select id="number-of-options" class="form-select" aria-label="Default">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+            <div class="variable-div">
+                <div class="mt-3">
+                    <label class="label-bold" for="number-of-options">Number of Option(s)</label>
+                    <select id="number-of-options" class="form-select" aria-label="Default">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
 
 
 
 
 
-            </div>
-
-
-
-            <div class="mt-3">
-                <label class="label-bold" for="number-of-options">Same Price For All Options</label>
-                <div class="margin:0.2rem 0 0 0;">
-                    <input value="yes" class="form-check-input" type="radio" name="is-same-price" id="is-same-price-1"
-                        checked>
-                    <label class="form-check-label" for="is-same-price-1">
-                        Yes
-                    </label>
-                    <input value="no" class="form-check-input  ms-2" type="radio" name="is-same-price"
-                        id="is-same-price-2">
-                    <label class="form-check-label" for="is-same-price-2">
-                        No
-                    </label>
                 </div>
 
-                <div class="opt-rows-div mt-3">
 
-                    <?php
+
+                <div class="mt-3">
+                    <label class="label-bold" for="number-of-options">Same Price For All Options</label>
+                    <div class="margin:0.2rem 0 0 0;">
+                        <input value="yes" class="form-check-input" type="radio" name="is-same-price"
+                            id="is-same-price-1" checked>
+                        <label class="form-check-label" for="is-same-price-1">
+                            Yes
+                        </label>
+                        <input value="no" class="form-check-input  ms-2" type="radio" name="is-same-price"
+                            id="is-same-price-2">
+                        <label class="form-check-label" for="is-same-price-2">
+                            No
+                        </label>
+                    </div>
+
+                    <div class="opt-rows-div mt-3">
+
+                        <?php
                 
                 for($k=1;$k<=10;$k++)
                 {
                     ?>
 
-                    <div class="row mb-2">
-                        <div class="col-6">
-                            <label for="opt-<?php echo $k;?>" class="label-bold">Option <?php echo $k;?></label>
-                            <input class="form-control" id="opt-<?php echo $k;?>" type="text">
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <label for="opt-<?php echo $k;?>" class="label-bold">Option <?php echo $k;?></label>
+                                <input class="form-control" id="opt-<?php echo $k;?>" type="text">
+                            </div>
+                            <div class="col-6">
+                                <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
+                                <input class="form-control" id="vp-price-<?php echo $k;?>" type="text">
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <label for="vp-price-<?php echo $k;?>" class="label-bold">Price</label>
-                            <input class="form-control" id="vp-price-<?php echo $k;?>" type="text">
-                        </div>
-                    </div>
-                    <?php
+                        <?php
                 }
                 ?>
 
+                    </div>
+
+
+
+
                 </div>
 
-
-
-
             </div>
-
-
 
             <div class="mt-3">
                 <input type="submit" value="submit" name="submit">
@@ -414,6 +417,12 @@ if($_POST['submit'])
 
         $('.opt-rows-div .row').fadeOut(0);
         $('.opt-rows-div .row').eq(0).fadeIn(0);
+
+        $('.product-type').change(function() {
+
+            alert($('.product-type').val());
+
+        })
     })
     </script>
 </body>
