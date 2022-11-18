@@ -60,8 +60,8 @@ if(!empty($_FILES))
 
     $total = count($_FILES['files_upload']['name']);
 
-    echo $_FILES['files_upload']['name'][0];
-    echo $_FILES['files_upload']['name'][1];
+    // echo $_FILES['files_upload']['name'][0];
+    // echo $_FILES['files_upload']['name'][1];
     
     // print_r($_FILES['files_upload']['name']);
     // echo $total;
@@ -73,6 +73,7 @@ if(!empty($_FILES))
         // echo $_FILES["file_upload"]["name"][0];
             for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
+                echo 1;
                         $wordpress_upload_dir = wp_upload_dir();
 
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["file_upload"]["name"][$i];
