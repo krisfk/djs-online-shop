@@ -2,6 +2,22 @@
 
 ini_set("display_errors", "On"); // 設定是否顯示錯誤( On=顯示, Off=隱藏 )
 
+// 
+// 
+
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Automattic\WooCommerce\Client;
+
+$woocommerce = new Client(
+  'https://www.djs.com.hk',
+  'ck_de8ae56fb0542de4713462233af0d4a727fce173',
+  'cs_792f6090a1f222378942329064bfa10e386b3f4a',
+  [
+    'version' => 'wc/v3',
+  ]
+);
 
 $data = [
     'name' => 'Premium Quality',
