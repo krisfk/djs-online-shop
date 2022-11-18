@@ -190,6 +190,10 @@ if($_POST['submit'])
                         $j++;
                         $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["files_upload"]["name"][$i];
                     }
+
+                    array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
+            
+                    
                     
                     if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
 
@@ -235,7 +239,7 @@ if($product_type='simple')
     'short_description' => $short_product_description,
     'categories' => [
         [
-            'id' => 9
+            'id' => 376
         ]
     ],
     'images' => $product_img_arr
