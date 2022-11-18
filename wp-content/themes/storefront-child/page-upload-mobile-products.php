@@ -126,6 +126,16 @@ $woocommerce = new Client(
 <body>
 
 
+    <?php
+
+if($_POST['submit'])
+{
+    $product_name=$_POST['product-name'];
+    $short_product_description=$_POST['product-description'];
+
+}
+?>
+
 
     <form action="" method="post" enctype="multipart/form-data">
 
@@ -148,7 +158,7 @@ $woocommerce = new Client(
 
             <div class="mt-3">
                 <label class="label-bold" for="product-description">Product Description:</label>
-                <input type="text" class="form-control" name="product-description" id="product-description">
+                <input type="text" class="form-control" name="product-description" id="product-description" value=".">
             </div>
 
             <div class="mt-3">
