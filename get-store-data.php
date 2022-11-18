@@ -295,87 +295,89 @@ require_once "simple_html_dom.php";
 ?>
 <!doctype html>
 <html>
+
 <head>
 
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="get-store-data.js"></script>
-
-
-
-<meta charset="UTF-8">
-<title>Get Data(JP Disneystore):</title>
-<style type="text/css">
-html{
-}
-
-table#product-table{
-  border-spacing: 0px;
-  margin: 0 0 40px 0;
-}
-
-table#product-table td {
-    padding: 10px;
-    vertical-align: top;
-    text-align: left;
-    white-space: nowrap;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
-
-table#product-table tr td:first-child{
-  border-left: 1px solid #000;
-
-}
-table#product-table th{
-	background:#000;
-color:#fff;
-	padding:10px;
-}
-
-</style>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-$(function(){
+    <script type="text/javascript" src="get-store-data.js"></script>
 
 
-$.ajax({
-  method: "GET",
-  url: "https://shopdisney.disney.co.jp/on/demandware.store/Sites-shopDisneyJapan-Site/ja_JP/Product-ShowQuickView?pid=4936313316827",
-  // data: { name: "John", location: "Boston" }
-})
-  .done(function( msg ) {
-    console.log(msg)
-    // alert( "Data Saved: " + msg );
-  });
-})
-</script>
+
+    <meta charset="UTF-8">
+    <title>Get Data(JP Disneystore):</title>
+    <style type="text/css">
+    html {}
+
+    table#product-table {
+        border-spacing: 0px;
+        margin: 0 0 40px 0;
+    }
+
+    table#product-table td {
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+        white-space: nowrap;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    table#product-table tr td:first-child {
+        border-left: 1px solid #000;
+
+    }
+
+    table#product-table th {
+        background: #000;
+        color: #fff;
+        padding: 10px;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    $(function() {
+
+
+        $.ajax({
+                method: "GET",
+                url: "https://shopdisney.disney.co.jp/on/demandware.store/Sites-shopDisneyJapan-Site/ja_JP/Product-ShowQuickView?pid=4936313316827",
+                // data: { name: "John", location: "Boston" }
+            })
+            .done(function(msg) {
+                console.log(msg)
+                // alert( "Data Saved: " + msg );
+            });
+    })
+    </script>
 
 </head>
 
 <body>
-<h1>Get Data(JP Disneystore):</h1>
+    <h1>Get Data(JP Disneystore):</h1>
 
-<form method="post" action="get-store-data.php">
-<textarea name="ids_str" rows="10" cols="80"><?php if (!empty($_POST['ids_str'])) {
+    <form method="post" action="get-store-data.php">
+        <textarea name="ids_str" rows="10" cols="80"><?php if (!empty($_POST['ids_str'])) {
 	echo $_POST['ids_str'];
 } ?></textarea>
-<br>
-<input type="submit" name="" value="submit" style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;cursor:pointer;">
-</form>
-<br>
-<?php
+        <br>
+        <input type="submit" name="" value="submit"
+            style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;cursor:pointer;">
+    </form>
+    <br>
+    <?php
 echo 'smallest_menu_order: '.$smallest_menu_order;
  ?>
 
-<br><br>
+    <br><br>
 
- <b>Get products string</b><br>
+    <b>Get products string</b><br>
 
 
- <code>
+    <code>
 
    var str='';
 
@@ -391,7 +393,7 @@ echo 'smallest_menu_order: '.$smallest_menu_order;
 
   console.log(str)
 </code>
-<!--
+    <!--
 <code>
   var str2 ='';
 
@@ -428,29 +430,29 @@ var str2="";for(i=0;i<$(".l-temp__item").size();i++){var str=$(".l-temp__item").
 </code> -->
 
 
- <br><br>
+    <br><br>
     <table id="product-table">
-    <tr>
-    <th>menu_order</th>
-    <th>sku</th>
-    <th>Name</th>
-    <th>Type</th>
-<th>cost_price</th>
- <th>regular_price</th>
-  <th>post_excerpt</th>
-   <th>fifu_image_url</th>
-	<th>fifu_image_url_0</th>
-	 <th>fifu_image_url_1</th>
-	 <th>fifu_image_url_2</th>
-	 <th>fifu_image_url_3</th>
-	 <th>fifu_image_url_4</th>
-	 <th>fifu_image_url_5</th>
-	 <th>fifu_image_url_6</th>
-	 <th>Categories</th>
-	 <th>Tags</th>
-   <th>Published</th>
-    </tr>
-    <?php
+        <tr>
+            <th>menu_order</th>
+            <th>sku</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>cost_price</th>
+            <th>regular_price</th>
+            <th>post_excerpt</th>
+            <th>fifu_image_url</th>
+            <th>fifu_image_url_0</th>
+            <th>fifu_image_url_1</th>
+            <th>fifu_image_url_2</th>
+            <th>fifu_image_url_3</th>
+            <th>fifu_image_url_4</th>
+            <th>fifu_image_url_5</th>
+            <th>fifu_image_url_6</th>
+            <th>Categories</th>
+            <th>Tags</th>
+            <th>Published</th>
+        </tr>
+        <?php
 
 
 //	$url = "http://store.disney.co.jp/g/g".$row['item_store_id']."/";
@@ -564,73 +566,82 @@ if (!empty($_POST['ids_str'])) {
 //    $menu_order = $smallest_menu_order;//sizeof($sku_arr);
 
     } ?>
-</table>
+    </table>
 
 
-<a href="#" id="xx" style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;">Export Table data into Excel</a>
+    <a href="#" id="xx"
+        style="text-decoration:none;color:#000;background-color:#ddd;border:1px solid #ccc;padding:8px;">Export Table
+        data into Excel</a>
 
-<script type="text/javascript">
-$(document).ready(function () {
-
-
-function exportTableToCSV($table, filename) {
-
-			var $rows = $table.find('tr:has(td),tr:has(th)'),
-
-					// Temporary delimiter characters unlikely to be typed by keyboard
-					// This is to avoid accidentally splitting the actual contents
-					tmpColDelim = String.fromCharCode(11), // vertical tab character
-					tmpRowDelim = String.fromCharCode(0), // null character
-
-					// actual delimiter characters for CSV format
-					colDelim = '","',
-					rowDelim = '"\r\n"',
-
-					// Grab text from table into CSV formatted string
-					csv = '"' + $rows.map(function (i, row) {
-							var $row = $(row), $cols = $row.find('td,th');
-
-							return $cols.map(function (j, col) {
-									var $col = $(col), text = $col.text();
-
-									return text.replace(/"/g, '""'); // escape double quotes
-
-							}).get().join(tmpColDelim);
-
-					}).get().join(tmpRowDelim)
-							.split(tmpRowDelim).join(rowDelim)
-							.split(tmpColDelim).join(colDelim) + '"',
+    <script type="text/javascript">
+    $(document).ready(function() {
 
 
+        function exportTableToCSV($table, filename) {
 
-					// Data URI
-					csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+            var $rows = $table.find('tr:has(td),tr:has(th)'),
 
-					console.log(csv);
+                // Temporary delimiter characters unlikely to be typed by keyboard
+                // This is to avoid accidentally splitting the actual contents
+                tmpColDelim = String.fromCharCode(11), // vertical tab character
+                tmpRowDelim = String.fromCharCode(0), // null character
 
-				if (window.navigator.msSaveBlob) { // IE 10+
-					//alert('IE' + csv);
-					window.navigator.msSaveOrOpenBlob(new Blob([csv], {type: "text/plain;charset=utf-8;"}), "csvname.csv")
-				}
-				else {
-					$(this).attr({ 'download': filename, 'href': csvData, 'target': '_blank' });
-				}
-	}
+                // actual delimiter characters for CSV format
+                colDelim = '","',
+                rowDelim = '"\r\n"',
 
-	// This must be a hyperlink
-	$("#xx").on('click', function (event) {
+                // Grab text from table into CSV formatted string
+                csv = '"' + $rows.map(function(i, row) {
+                    var $row = $(row),
+                        $cols = $row.find('td,th');
 
-			exportTableToCSV.apply(this, [$('#product-table'), 'export.csv']);
+                    return $cols.map(function(j, col) {
+                        var $col = $(col),
+                            text = $col.text();
 
-			// IF CSV, don't do event.preventDefault() or return false
-			// We actually need this to be a typical hyperlink
-	});
+                        return text.replace(/"/g, '""'); // escape double quotes
 
-});
+                    }).get().join(tmpColDelim);
 
-</script>
-<?php
+                }).get().join(tmpRowDelim)
+                .split(tmpRowDelim).join(rowDelim)
+                .split(tmpColDelim).join(colDelim) + '"',
+
+
+
+                // Data URI
+                csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+
+            console.log(csv);
+
+            if (window.navigator.msSaveBlob) { // IE 10+
+                //alert('IE' + csv);
+                window.navigator.msSaveOrOpenBlob(new Blob([csv], {
+                    type: "text/plain;charset=utf-8;"
+                }), "csvname.csv")
+            } else {
+                $(this).attr({
+                    'download': filename,
+                    'href': csvData,
+                    'target': '_blank'
+                });
+            }
+        }
+
+        // This must be a hyperlink
+        $("#xx").on('click', function(event) {
+
+            exportTableToCSV.apply(this, [$('#product-table'), 'export.csv']);
+
+            // IF CSV, don't do event.preventDefault() or return false
+            // We actually need this to be a typical hyperlink
+        });
+
+    });
+    </script>
+    <?php
 }
  ?>
 </body>
+
 </html>
