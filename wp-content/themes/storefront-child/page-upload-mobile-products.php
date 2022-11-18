@@ -81,30 +81,30 @@ $prod_data = [
      ),
      'variations' => array(
         array(
-            'sku' => 'codered',
+            'sku' => date('His').'_1',
             'regular_price' => '29.98',
             'attributes' => array( 
                 array( 
                     'id' => date('YmdHis', strtotime('+2 seconds')),
                     'slug'=>'color',
                     'name'=>'color',
-                    'options'=>'red'
+                    'option'=>'red' 
                 )
-                
             ) 
         ),
         array(
-            'sku' => 'codeblack',
+            'sku' => date('His').'_2',
             'regular_price' => '29.98',
             'attributes' => array( 
                 array( 
-                    'id' => date('YmdHis', strtotime('+2 seconds')),
+                    'id' => date('YmdHis'),
                     'slug'=>'color',
                     'name'=>'color',
-                    'options'=>'black'
+                    'option'=>'black'
                 )
             ) 
-        )
+        
+       )
     )
         
 
