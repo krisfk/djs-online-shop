@@ -362,6 +362,21 @@ if($_POST['submit'])
                     </label>
                 </div>
 
+                <div class="row">
+
+                    <div class="col-6">
+                        <label for="attr-1">Attribute 1</label>
+                        <input class="form-control" id="attr-1" type="text">
+                    </div>
+                    <div class="col-6">
+                        <label for="vp-price-1">Price</label>
+                        <input class="form-control" id="vp-price-1" type="text">
+                    </div>
+
+                </div>
+
+
+
 
 
             </div>
