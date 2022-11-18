@@ -420,8 +420,17 @@ if($_POST['submit'])
 
         $('input[name="product-type"]').change(function() {
 
-            // alert($('input[name="product-type"]').val());
-            console.log($("input[name='product-type']:checked").val());
+            var type = $("input[name='product-type']:checked").val();
+
+            if (type = "simple") {
+                $('.variable-div').fadeOut(0);
+                $('.simple-div').fadeIn(0);
+            }
+
+            if (type = "variable") {
+                $('.variable-div').fadeIn(0);
+                $('.simple-div').fadeOut(0);
+            }
         })
     })
     </script>
