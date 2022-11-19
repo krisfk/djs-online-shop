@@ -134,14 +134,14 @@ $variation_data = [
 
 $upload_to_cate_id = 376;
 
-if($_FILES['files_upload']['name'][0])
-{
-    echo 'yes';
-}
-else
-{
-    echo 'no';
-}
+// if($_FILES['files_upload']['name'][0])
+// {
+//     echo 'yes';
+// }
+// else
+// {
+//     echo 'no';
+// }
 // print_r($_FILES['files_upload']['name'][0]);
 
 if($_POST['submit'])
@@ -168,6 +168,7 @@ if($_POST['submit'])
 
             array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
             
+            echo 'up1';
             if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
 
                 $upload_id = wp_insert_attachment( array(
@@ -191,7 +192,7 @@ if($_POST['submit'])
         if($_FILES['files_upload']['name'][0])
         {
 
-            echo 'in';
+            // echo 'in';
         
         for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
@@ -208,6 +209,7 @@ if($_POST['submit'])
             
                     
                     
+            echo 'up2';
                     if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
 
                         $upload_id = wp_insert_attachment( array(
