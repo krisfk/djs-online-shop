@@ -191,6 +191,7 @@ if($_POST['submit'])
         if($_FILES['files_upload']['name'][0])
         {
 
+            echo 'in';
         
         for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
             {
