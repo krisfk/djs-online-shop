@@ -11,6 +11,11 @@ h4 {
     color: #e14291;
 }
 
+a {
+    color: #e14291;
+    text-decoration: underline;
+}
+
 .loading-lightbox {
     position: fixed;
     top: 0;
