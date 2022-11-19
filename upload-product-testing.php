@@ -35,10 +35,11 @@ $data = [
     ],
     'images' => [
         [
-            'id' => 43731
+            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
+            
         ],
         [
-            'id' => 43731
+            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg'
         ]
     ]
 ];
