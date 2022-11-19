@@ -20,10 +20,13 @@ h4 {
     background: rgb(255 255 255 / 70%);
 }
 
-.loading-lightbox img {
+.loading-lightbox-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.loading-lightbox img {
     width: 250px;
 }
