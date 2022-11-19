@@ -560,6 +560,13 @@ for($i=0;$i<$number_of_options;$i++)
                 $('.wp-price').val($(this).val());
             }
         })
+
+
+        $('form').submit(function() {
+
+
+            $('.loading-lightbox').fadeIn(200);
+        })
     })
     </script>
 </body>
