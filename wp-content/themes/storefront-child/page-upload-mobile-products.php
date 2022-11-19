@@ -363,6 +363,10 @@ for($i=0;$i<$number_of_options;$i++)
 
         <div class="container mt-3">
 
+
+            <div class="text-center">
+                <img src="https://www.djs.com.hk/wp-content/uploads/2021/06/cropped-djs-logo.jpg" alt="">
+            </div>
             <h4 class="text-center">Djs Web Product Upload Via Mobile</h4>
 
             <div class="mt-4">
