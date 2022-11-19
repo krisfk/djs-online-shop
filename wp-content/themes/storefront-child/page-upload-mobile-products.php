@@ -376,7 +376,7 @@ for($i=0;$i<$number_of_options;$i++)
         if($_POST['submit'])
         {
             ?>
-            <div class="msg text-center">Product was uploaded to <a
+            <div class="msg text-center">Product was uploaded to <a target="_blank"
                     href="https://www.djs.com.hk/product-category/jpconnect/">here</a> </div>
 
             <?php
