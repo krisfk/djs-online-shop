@@ -150,7 +150,7 @@ if($_POST['submit'])
     if(!empty($_FILES))
     {
 
-        // $product_img_arr=[];
+        $product_img_arr=[];
        
             $wordpress_upload_dir = wp_upload_dir();
 
