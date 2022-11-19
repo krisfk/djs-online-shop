@@ -372,8 +372,19 @@ for($i=0;$i<$number_of_options;$i++)
         <div class="container mt-3">
 
 
-            <div class="msg text-center">product uploaded~ see the <a
-                    href="https://www.djs.com.hk/product-category/jpconnect/">result</a> </div>
+            <?php
+        if($_POST['submit'])
+        {
+            ?>
+            <div class="msg text-center">product uploaded. link <a
+                    href="https://www.djs.com.hk/product-category/jpconnect/">here</a> </div>
+
+            <?php
+        }
+
+        ?>
+
+
             <div class="text-center">
                 <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/photo.png" alt="">
             </div>
