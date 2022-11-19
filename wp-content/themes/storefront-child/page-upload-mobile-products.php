@@ -161,7 +161,7 @@ if($_POST['submit'])
                 $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["file_upload"]["name"];
             }
 
-            array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
+            // array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
             
             echo 'up1';
             if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
