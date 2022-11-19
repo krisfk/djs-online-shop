@@ -81,18 +81,18 @@ $woocommerce = new Client(
 
 // $product = $woocommerce->post( 'products', $prod_data );
 
-$variation_data = [
-	'regular_price' => '15.00',
-	// 'image'         => [
-	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
-	// ],
-	'attributes'    => [
-		[
-			'id'     => 3,
-			'option' => 'L',
-		],
-	],
-];
+// $variation_data = [
+// 	'regular_price' => '15.00',
+// 	// 'image'         => [
+// 	// 	'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg',
+// 	// ],
+// 	'attributes'    => [
+// 		[
+// 			'id'     => 3,
+// 			'option' => 'L',
+// 		],
+// 	],
+// ];
 
 // // 
 // $woocommerce->post( "products/$product->id/variations", $variation_data );
@@ -150,6 +150,7 @@ if($_POST['submit'])
     if(!empty($_FILES))
     {
 
+        echo 1;
 
         $product_img_arr=[];
         // ['src'=>'']
