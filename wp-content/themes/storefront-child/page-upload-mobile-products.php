@@ -180,7 +180,7 @@ if($_POST['submit'])
                 echo "Sorry, there was an error uploading your file.";
             } 
 
-            array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
+            // array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
  
             
 
