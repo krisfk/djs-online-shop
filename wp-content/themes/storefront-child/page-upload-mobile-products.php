@@ -161,67 +161,67 @@ if($_POST['submit'])
                 $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["file_upload"]["name"];
             }
 
-            array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
-             
-            // if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
-
-            //     $upload_id = wp_insert_attachment( array(
-            //     'guid'           => $new_file_path, 
-            //     'post_mime_type' => 'image/*',
-            //     'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"] ),
-            //     'post_content'   => '',
-            //     'post_status'    => 'inherit'
-            // ), $new_file_path );
-            // require_once( ABSPATH . 'wp-admin/includes/image.php' );
-
-            // wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
-
-            // } else {
-            //     echo "Sorry, there was an error uploading your file.";
-            // } 
-
             
+            if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $new_file_path)) {
+
+                $upload_id = wp_insert_attachment( array(
+                'guid'           => $new_file_path, 
+                'post_mime_type' => 'image/*',
+                'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["file_upload"]["name"] ),
+                'post_content'   => '',
+                'post_status'    => 'inherit'
+            ), $new_file_path );
+            require_once( ABSPATH . 'wp-admin/includes/image.php' );
+
+            wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            } 
+
+            array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
+ 
             
 
        
             //other image
-        // if($_FILES['files_upload']['name'][0])
-        // {
+        if($_FILES['files_upload']['name'][0])
+        {
 
-        //     for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
-        //         {
-        //                     $wordpress_upload_dir = wp_upload_dir();
+            for($i=0;$i<count($_FILES['files_upload']['name']);$i++)
+                {
+                            $wordpress_upload_dir = wp_upload_dir();
 
-        //                     $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["files_upload"]["name"][$i];
-        //                     $j=0;
-        //                 while( file_exists( $new_file_path ) ) {
-        //                     $j++;
-        //                     $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["files_upload"]["name"][$i];
-        //                 }
+                            $new_file_path = $wordpress_upload_dir['path'] . '/' . $_FILES["files_upload"]["name"][$i];
+                            $j=0;
+                        while( file_exists( $new_file_path ) ) {
+                            $j++;
+                            $new_file_path = $wordpress_upload_dir['path'] . '/' . $j . '_' . $_FILES["files_upload"]["name"][$i];
+                        }
 
-        //                 array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
+                        array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
                 
                         
                         
-        //                 if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
+                        if (move_uploaded_file($_FILES["files_upload"]["tmp_name"][$i], $new_file_path)) {
 
-        //                     $upload_id = wp_insert_attachment( array(
-        //                     'guid'           => $new_file_path, 
-        //                     'post_mime_type' => 'image/*',
-        //                     'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["files_upload"]["name"][$i] ),
-        //                     'post_content'   => '',
-        //                     'post_status'    => 'inherit'
-        //                 ), $new_file_path );
-        //                 require_once( ABSPATH . 'wp-admin/includes/image.php' );
+                            $upload_id = wp_insert_attachment( array(
+                            'guid'           => $new_file_path, 
+                            'post_mime_type' => 'image/*',
+                            'post_title'     => preg_replace( '/\.[^.]+$/', '', $_FILES["files_upload"]["name"][$i] ),
+                            'post_content'   => '',
+                            'post_status'    => 'inherit'
+                        ), $new_file_path );
+                        require_once( ABSPATH . 'wp-admin/includes/image.php' );
 
-        //                 wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
+                        wp_update_attachment_metadata( $upload_id, wp_generate_attachment_metadata( $upload_id, $new_file_path ) );
                     
-        //                 } else {
-        //                     echo "Sorry, there was an error uploading your file.";
-        //                 }  
-        //         }
+                        } else {
+                            echo "Sorry, there was an error uploading your file.";
+                        }  
+                }
 
-        // }
+        }
 
 
     }
