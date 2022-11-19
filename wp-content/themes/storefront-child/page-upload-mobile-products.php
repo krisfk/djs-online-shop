@@ -359,8 +359,11 @@ for($i=0;$i<$number_of_options;$i++)
 
     <div class="loading-lightbox">
 
-        <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/spin.gif" alt="">
 
+        <div class="loading-lightbox-center text-center">
+            <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/spin.gif" alt="">
+            <h2>Uploading...</h2>
+        </div>
     </div>
 
     <form action="" method="post" enctype="multipart/form-data">
