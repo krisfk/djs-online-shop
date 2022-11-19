@@ -12,7 +12,7 @@ h4 {
 }
 
 a {
-    color: #e14291;
+    color: #e14291 !important;
     text-decoration: underline;
 }
 
