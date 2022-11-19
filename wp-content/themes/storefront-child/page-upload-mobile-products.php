@@ -365,7 +365,7 @@ for($i=0;$i<$number_of_options;$i++)
 
 
             <div class="text-center">
-                <img src="https://www.djs.com.hk/wp-content/uploads/2021/06/cropped-djs-logo.jpg" alt="">
+                <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/photo.png" alt="">
             </div>
             <h4 class="text-center">Djs Web Product Upload Via Mobile</h4>
 
