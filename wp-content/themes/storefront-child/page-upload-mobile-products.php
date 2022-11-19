@@ -134,7 +134,15 @@ $variation_data = [
 
 $upload_to_cate_id = 376;
 
-print_r($_FILES['files_upload']['name']);
+if($_FILES['files_upload']['name'][0])
+{
+    echo 'yes';
+}
+else
+{
+    echo 'no';
+}
+// print_r($_FILES['files_upload']['name'][0]);
 
 if($_POST['submit'])
 {
