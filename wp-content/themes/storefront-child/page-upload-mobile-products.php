@@ -16,6 +16,7 @@ $woocommerce = new Client(
   ]
 );
 
+$allow_display=false;
 if(!is_user_logged_in())
 {
 
@@ -23,6 +24,10 @@ if(!is_user_logged_in())
 <h1 class="mt-5 text-center">Please login at <br><a href="https://www.djs.com.hk/wp-login.php"
         target="_blank">https://www.djs.com.hk/wp-login.php</a> <br> then return here again</h1>
 <?php
+}
+else
+{
+    $allow_display=true;
 }
 // simple
 // $data = [
@@ -139,17 +144,9 @@ if(!is_user_logged_in())
     <?php
 
 
+
 $upload_to_cate_id = 376;
 
-// if($_FILES['files_upload']['name'][0])
-// {
-//     echo 'yes';
-// }
-// else
-// {
-//     echo 'no';
-// }
-// print_r($_FILES['files_upload']['name'][0]);
 
 if($_POST['submit'])
 {
@@ -309,7 +306,6 @@ if($_POST['submit'])
 
 $product = $woocommerce->post( 'products', $data );
 
-// $variation_data =[];
 
 for($i=0;$i<$number_of_options;$i++)
 {
@@ -325,45 +321,20 @@ for($i=0;$i<$number_of_options;$i++)
         $woocommerce->post( "products/$product->id/variations", $variation_data );
 }
 
-// $variation_data = [
-// 	'regular_price' => '15.00',
-// 	'attributes'    => [
-// 		[
-// 			'id'     => 3,
-// 			'option' => 'L',
-// 		],
-// 	],
-// ];
 
-// 
 
-           // echo $product_name;
-            // echo '<br>';
-            // echo $short_product_description;
-            // echo '<br>';
-            // echo $product_type;
-            // echo '<br>';
-            // echo $price;
-            // echo '<br>';
-
-            
     }
-
-    // echo $product_name;
-    // echo '<br>';
-    // echo $short_product_description;
-    // echo '<br>';
-    // echo $product_type;
-    // echo '<br>';
-    // echo $price;
-    // echo '<br>';
-
-    
-    
 
 }
 ?>
 
+    <?php
+
+if($allow_display)
+{
+
+
+?>
     <div class="loading-lightbox">
 
 
@@ -527,6 +498,9 @@ for($i=0;$i<$number_of_options;$i++)
         </div>
 
     </form>
+    <?php
+}
+    ?>
 
     <script type="text/javascript">
     $(function() {
