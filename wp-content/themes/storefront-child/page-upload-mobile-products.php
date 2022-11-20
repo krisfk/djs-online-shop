@@ -16,9 +16,13 @@ $woocommerce = new Client(
   ]
 );
 
-if(is_user_logged_in())
+if(!is_user_logged_in())
 {
-    echo 1;
+
+    ?>
+<h1>Please login at <a href="https://www.djs.com.hk/wp-login.php"
+        target="_blank">https://www.djs.com.hk/wp-login.php</a> then return here again</h1>
+<?php
 }
 // simple
 // $data = [
