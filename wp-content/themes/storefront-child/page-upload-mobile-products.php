@@ -490,7 +490,7 @@ if($allow_display)
 
             </div>
 
-            <div class="mt-3">
+            <div class="mt-3 mb-5 text-center">
                 <input class="submit-btn" type="submit" value="submit" name="submit">
             </div>
 
