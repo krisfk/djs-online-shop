@@ -565,7 +565,8 @@ if($allow_display)
         $('.submit-btn').click(function() {
 
 
-            $('.loading-lightbox').fadeIn(200);
+            alert(9);
+            // $('.loading-lightbox').fadeIn(200);
         })
     })
     </script>
