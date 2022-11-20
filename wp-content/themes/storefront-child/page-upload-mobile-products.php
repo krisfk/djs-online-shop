@@ -491,7 +491,7 @@ if($allow_display)
             </div>
 
             <div class="mt-3">
-                <input type="submit" value="submit" name="submit">
+                <input class="submit-btn" type="submit" value="submit" name="submit">
             </div>
 
 
@@ -556,7 +556,7 @@ if($allow_display)
         })
 
 
-        $('form').submit(function() {
+        $('.submit-btn').submit(function() {
 
 
             $('.loading-lightbox').fadeIn(200);
