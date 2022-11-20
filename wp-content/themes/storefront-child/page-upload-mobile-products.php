@@ -20,7 +20,7 @@ if(!is_user_logged_in())
 {
 
     ?>
-<h1>Please login at <a href="https://www.djs.com.hk/wp-login.php"
+<h1 class="mt-5 text-center">Please login at <a href="https://www.djs.com.hk/wp-login.php"
         target="_blank">https://www.djs.com.hk/wp-login.php</a> <br> then return here again</h1>
 <?php
 }
