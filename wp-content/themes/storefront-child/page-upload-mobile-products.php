@@ -496,7 +496,7 @@ if($allow_display)
 
             </div>
 
-            <div class="mt-3 mb-5 text-center">
+            <div class="mt-3 mb-5 text-center submit-div">
                 <input class="submit-btn" type="submit" value="submit" name="submit">
             </div>
 
@@ -565,7 +565,8 @@ if($allow_display)
         $('.submit-btn').click(function() {
 
 
-            alert(9);
+            $('.submit-div').html('<div class="text-center">uploading...please wait...</div>');
+            // alert(9);
             // $('.loading-lightbox').fadeIn(200);
         })
     })
