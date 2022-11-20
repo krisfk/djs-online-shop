@@ -568,7 +568,9 @@ if($allow_display)
 
         $('form').submit(function() {
 
-            $('.submit-btn').attr('disabled', 'disabled');
+            $('.loading-lightbox').fadeIn(0);
+
+            // $('.submit-btn').attr('disabled', 'disabled');
 
         })
 
