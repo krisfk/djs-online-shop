@@ -562,13 +562,19 @@ if($allow_display)
         })
 
 
-        $('.submit-btn').click(function() {
 
+
+        // $('.submit-btn').click(function() {
+
+        $('form').submit(function() {
 
             $('.submit-div').html('<div class="text-center">uploading...please wait...</div>');
-            // alert(9);
-            // $('.loading-lightbox').fadeIn(200);
+
         })
+
+        // alert(9);
+        // $('.loading-lightbox').fadeIn(200);
+        // })
     })
     </script>
 </body>
