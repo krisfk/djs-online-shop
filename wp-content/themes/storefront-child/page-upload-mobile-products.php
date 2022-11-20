@@ -566,11 +566,11 @@ if($allow_display)
 
         // $('.submit-btn').click(function() {
 
-        // $('form').submit(function() {
+        $('form').submit(function() {
 
-        //     $('.submit-div').html('<div class="text-center">uploading...please wait...</div>');
-
-        // })
+            $('.submit-div').html('<div class="text-center">uploading...please wait...</div>');
+            return true;
+        })
 
         // alert(9);
         // $('.loading-lightbox').fadeIn(200);
