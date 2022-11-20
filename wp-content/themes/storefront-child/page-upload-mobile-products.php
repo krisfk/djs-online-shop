@@ -355,7 +355,13 @@ if($allow_display)
         {
             ?>
             <div class="msg text-center">Product was uploaded to <a target="_blank"
-                    href="https://www.djs.com.hk/product-category/jpconnect/">here</a> </div>
+                    href="https://www.djs.com.hk/product-category/jpconnect/">here</a>
+                <br>
+
+                You can edit the products <a
+                    href="https://www.djs.com.hk/wp-admin/edit.php?s&post_status=all&post_type=product&seo_filter&readability_filter&layout=5e79e06013ad4&product_cat=jpconnect&product_type&stock_status&filter_action=Filter&paged=1"
+                    target="_blank">here</a> if make any mistake.
+            </div>
 
             <?php
         }
