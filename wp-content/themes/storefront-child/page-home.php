@@ -14,38 +14,40 @@ get_header();
 ?>
 
 <script type="text/javascript">
+$(function() {
 
-$(function(){
+    $('.home-page-shortcut-btn').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
 
-$('.home-page-shortcut-btn').click(function(e){
-e.preventDefault();
-$(this).toggleClass('active');
-
-if($(this).hasClass('active'))
-{
-	$('.home-page-shortcut-ul').fadeIn(300);
-}
-else{
-	$('.home-page-shortcut-ul').fadeOut(0);
-}
+        if ($(this).hasClass('active')) {
+            $('.home-page-shortcut-ul').fadeIn(300);
+        } else {
+            $('.home-page-shortcut-ul').fadeOut(0);
+        }
 
 
 
-});
+    });
 
-$('.home-cate-shortcut-link').click(function(e){
+    $('.home-cate-shortcut-link').click(function(e) {
 
-	e.preventDefault();
-	$('.home-page-shortcut-btn').removeClass('active');
-	$('.home-page-shortcut-ul').fadeOut(0);
-	var idx=$(this).attr('data-link');
-	// alert(idx);
-	$('body,html').stop().animate({scrollTop: $('.home-cate-'+idx).offset().top-10},{duration:500,complete:function(){}} );
+        e.preventDefault();
+        $('.home-page-shortcut-btn').removeClass('active');
+        $('.home-page-shortcut-ul').fadeOut(0);
+        var idx = $(this).attr('data-link');
+        // alert(idx);
+        $('body,html').stop().animate({
+            scrollTop: $('.home-cate-' + idx).offset().top - 10
+        }, {
+            duration: 500,
+            complete: function() {}
+        });
 
 
 
 
-})
+    })
 });
 </script>
 <div class="home-page-shortcut-blk"><?php $query=new WP_Query(array('post_type'=> 'hp_products_grp', 'posts_per_page'   => -1));
@@ -65,9 +67,11 @@ if ($query->have_posts()) {
   echo'</ul>';
 }
 
-?><a href="#"class="home-page-shortcut-btn">首頁捷徑</a></div><div id="primary"class="content-area"><main id="main"class="site-main"role="main">
+?><a href="#" class="home-page-shortcut-btn">首頁捷徑</a></div>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-	<?php
+        <?php
 	// if (have_posts()) : get_template_part('loop');
 // else : get_template_part('content', 'none');
 // endif;
@@ -76,33 +80,39 @@ if ($query->have_posts()) {
 // echo do_shortcode('[instagram-feed user="djsshopping" id="1297773553" includewords="#妙妙貓" cols=4 num=4 media=photos showheader=false showcaption=false]');
 ?>
 
-<?php
+
+        <?php
 echo '	<div class="clear-line"></div>';
-//				$slug = basename( get_permalink() );
-//					echo get_the_ID();
+echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 日本即時連線 - <a href="https://www.djs.com.hk/product-category/jpconnect/">View all </a> -</h2>';
+echo do_shortcode('[products category="jpconnect" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
+?>
+
+
+
+        <?php
+echo '	<div class="clear-line"></div>';
 echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 即時新貨 - <a href="https://www.djs.com.hk/product-category/live-new-product/">View all </a> -</h2>';
-// $group_tag=get_field('group_tag')->slug;
-// $group_category=get_field('group_category')->slug;
 echo do_shortcode('[products category="live-new-product" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
 ?>
 
 
 
-<h2 class="page-title home-cate-10">- 最新系列 - </h2>
-<?php
+        <h2 class="page-title home-cate-10">- 最新系列 - </h2>
+        <?php
 echo do_shortcode('[slick-carousel-slider category="146" design="design-6" slidestoshow="3"]');
 echo do_shortcode('[slick-carousel-slider category="147" design="design-6" slidestoshow="3"]');
 echo do_shortcode('[slick-carousel-slider category="148" design="design-6" slidestoshow="3"]');
 ?><?php $terms=get_terms(array('taxonomy'=> 'product_tag', 'hide_empty'=> false));
 
-?><h2 class="page-title home-cate-11">- 角色分類 - </h2><div class="product-tags"><?php foreach ($terms as $term) {
-  ?><a href="<?php echo get_term_link($term->term_id, 'product_tag'); ?> "rel="tag"><?php echo $term->name;
+?><h2 class="page-title home-cate-11">- 角色分類 - </h2>
+        <div class="product-tags"><?php foreach ($terms as $term) {
+  ?><a href="<?php echo get_term_link($term->term_id, 'product_tag'); ?> " rel="tag"><?php echo $term->name;
   ?></a><?php
 }
 
 ?></div>
 
-<?php $query=new WP_Query(array('post_type'=> 'hp_products_grp','posts_per_page'   => -1));
+        <?php $query=new WP_Query(array('post_type'=> 'hp_products_grp','posts_per_page'   => -1));
 
 if ($query->have_posts()) {
   while ($query->have_posts()) {
@@ -117,6 +127,8 @@ if ($query->have_posts()) {
   }
 }
 
-?></main></div><?php do_action('storefront_sidebar');
+?>
+    </main>
+</div><?php do_action('storefront_sidebar');
 
 get_footer();
