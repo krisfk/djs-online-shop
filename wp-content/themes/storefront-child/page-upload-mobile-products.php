@@ -16,7 +16,10 @@ $woocommerce = new Client(
   ]
 );
 
-
+if(is_user_logged_in())
+{
+    echo 1;
+}
 // simple
 // $data = [
 //     'name' => 'Premium Quality',
