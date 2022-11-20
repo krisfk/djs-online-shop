@@ -568,8 +568,8 @@ if($allow_display)
 
         $('form').submit(function() {
 
-            $('.submit-div').html('<div class="text-center">uploading...please wait...</div>');
-            return true;
+            $('.submit-btn').attr('disabled', 'disabled');
+
         })
 
         // alert(9);
