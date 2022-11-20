@@ -80,6 +80,7 @@ if ($query->have_posts()) {
 // echo do_shortcode('[instagram-feed user="djsshopping" id="1297773553" includewords="#妙妙貓" cols=4 num=4 media=photos showheader=false showcaption=false]');
 ?>
 
+        <div style="text-align:center;">日本連線期間，如購買請直接銀行過數/FPS，免除信用咭支付的手續費</div>
 
         <?php
 echo '	<div class="clear-line"></div>';
