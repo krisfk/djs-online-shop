@@ -182,7 +182,7 @@ if($_POST['submit'])
             array_push($product_img_arr,['id'=>$upload_id]);
 
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                echo "<div class='text-center mt-4'>Sorry, there was an error uploading your file.</div>";
             } 
 
             // array_push($product_img_arr,['src'=>str_replace('/var/www/html/djs-online-shop',get_site_url(),$new_file_path)]);
