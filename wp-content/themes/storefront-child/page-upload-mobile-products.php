@@ -556,7 +556,7 @@ if($allow_display)
         })
 
 
-        $('.submit-btn').submit(function() {
+        $('.submit-btn').click(function() {
 
 
             $('.loading-lightbox').fadeIn(200);
