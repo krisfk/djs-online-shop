@@ -372,7 +372,7 @@ if($allow_display)
             <div class="text-center">
                 <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/photo.png" alt="">
             </div>
-            <h4 class="text-center">Djs Web Product Upload Via Mobile</h4>
+            <h4 class="text-center">Djs Web Product Upload Via Mobile(即時新貨)</h4>
 
             <div class="mt-4">
                 <label class="label-bold" for="product-name">*Product Name:</label>
