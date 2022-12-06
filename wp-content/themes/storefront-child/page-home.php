@@ -80,14 +80,10 @@ if ($query->have_posts()) {
 // echo do_shortcode('[instagram-feed user="djsshopping" id="1297773553" includewords="#妙妙貓" cols=4 num=4 media=photos showheader=false showcaption=false]');
 ?>
 
-        <h4 style="text-align:center;margin-top:1rem;color:#d73b89;">🇯🇵日本連線期間，如購買請直接銀行過數/FPS，以節省信用咭支付的手續費和轉帳延遲。Thank
-            you🙇🏻‍♂️</h4>
+        <!-- <h4 style="text-align:center;margin-top:1rem;color:#d73b89;">🇯🇵日本連線期間，如購買請直接銀行過數/FPS，以節省信用咭支付的手續費和轉帳延遲。Thank
+            you🙇🏻‍♂️</h4> -->
 
-        <?php
-echo '	<div class="clear-line"></div>';
-echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 🇯🇵日本即時連線🛍GOGOGO - <a href="https://www.djs.com.hk/product-category/jpconnect/">View all </a> -</h2>';
-echo do_shortcode('[products category="jpconnect" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
-?>
+
 
 
 
@@ -97,6 +93,12 @@ echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 即時新貨 - <a href=
 echo do_shortcode('[products category="live-new-product" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
 ?>
 
+
+        <?php
+echo '	<div class="clear-line"></div>';
+echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 🇯🇵日本即時連線🛍GOGOGO - <a href="https://www.djs.com.hk/product-category/jpconnect/">View all </a> -</h2>';
+echo do_shortcode('[products category="jpconnect" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
+?>
 
 
         <h2 class="page-title home-cate-10">- 最新系列 - </h2>
