@@ -525,6 +525,7 @@ table.cart td {
 
 .site-content .col-full {
     max-width: 92%;
+    min-height: 75vh;
     /* max-width: 66.4989378333em; */
 }
 
