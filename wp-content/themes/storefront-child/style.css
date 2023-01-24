@@ -1276,11 +1276,11 @@ article {
 }
 
 .site-header .custom-logo-link:after {
-    content: "Djsshopping";
+    content: "DJSSHOPPING";
     font-size: 30px;
     display: inline;
     color: #e82b8f;
-    font-family: "Brygada1918";
+    font-family: initial;
     /* font-family: 'Clicker Script', cursive; */
     float: left;
     margin: 9px 0 0 0;
