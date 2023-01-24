@@ -730,6 +730,7 @@ ul.products li.product img {
     transition: 0.3s all;
     /* border: 1px solid #d43c88; */
     /* border-style: dashed; */
+    border-radius: 4rem;
 }
 
 ul.products li.product img:hover {
