@@ -95,9 +95,9 @@ echo do_shortcode('[products category="live-new-product" limit="18" columns="4" 
 
 
         <?php
-echo '	<div class="clear-line"></div>';
-echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 🇯🇵日本即時連線🛍GOGOGO - <a href="https://www.djs.com.hk/product-category/jpconnect/">View all </a> -</h2>';
-echo do_shortcode('[products category="jpconnect" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
+// echo '	<div class="clear-line"></div>';
+// echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 🇯🇵日本即時連線🛍GOGOGO - <a href="https://www.djs.com.hk/product-category/jpconnect/">View all </a> -</h2>';
+// echo do_shortcode('[products category="jpconnect" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
 ?>
 
 
