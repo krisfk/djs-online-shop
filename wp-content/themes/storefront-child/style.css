@@ -20,6 +20,10 @@ Template: storefront
     src: url('./assets/fonts/Brygada1918-VariableFont_wght.ttf') format('ttf');
 }
 
+body {
+    background: url(https://www.djs.com.hk/wp-content/uploads/2023/01/haha.jpg) fixed;
+}
+
 a:focus {
     outline: none;
 }
