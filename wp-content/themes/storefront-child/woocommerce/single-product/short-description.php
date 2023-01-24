@@ -75,7 +75,7 @@ $(function() {
     <!--  -->
     <span style="color:#d5418d;font-weight:bold;">門市地址:</span><br>
     ・觀塘 62號駿業街 京貿中心 2樓E<br>
-    ・Tue - Fri 4-8pm / Sat-Sun 3-7pm <br>
+    ・Tue-Sat 3-8pm / Sun 2-6pm<br>
     ・任何查詢可聯絡 Wts: 94444920<br><br>
 
     <span style="color:#d5418d;font-weight:bold;">😘溫提：</span><br>
