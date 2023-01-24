@@ -1272,7 +1272,7 @@ article {
 }
 
 .site-header .custom-logo-link:after {
-    /* content: "DJSSHOPPING"; */
+    content: 'DJSSHOPPING';
     font-size: 30px;
     display: inline;
     color: #e82b8f;
