@@ -1063,6 +1063,10 @@ article {
     font-weight: normal;
 }
 
+#mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
+    font-size: 15px;
+}
+
 @media (max-width: 66.4989378333em) {
     #sb_instagram .sb_instagram_header {
         width: 92%;
