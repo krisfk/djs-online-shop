@@ -574,6 +574,18 @@ table.cart td {
     color: #fff;
 }
 
+.site-header,
+.secondary-navigation ul ul,
+.main-navigation ul.menu>li.menu-item-has-children:after,
+.secondary-navigation ul.menu ul,
+.storefront-handheld-footer-bar,
+.storefront-handheld-footer-bar ul li>a,
+.storefront-handheld-footer-bar ul li.search .site-search,
+button.menu-toggle,
+button.menu-toggle:hover {
+    background-color: transparent;
+}
+
 .storefront-full-width-content .woocommerce-products-header,
 .storefront-full-width-content.woocommerce-account .entry-header,
 .storefront-full-width-content.woocommerce-cart .entry-header,
