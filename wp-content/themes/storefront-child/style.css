@@ -1017,6 +1017,12 @@ button.menu-toggle:hover,
     color: #fff;
 }
 
+a.cart-contents:hover,
+.site-header-cart .widget_shopping_cart a:hover,
+.site-header-cart:hover>li>a {
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .home-page-shortcut-blk {
         display: block;
