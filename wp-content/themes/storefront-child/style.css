@@ -752,6 +752,7 @@ ul.products li.product img {
 
 ul.products li.product img:hover {
     opacity: 0.8;
+    border-radius: 0rem;
 }
 
 .home .ajax_add_to_cart,
