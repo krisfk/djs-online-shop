@@ -123,7 +123,7 @@ else
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobile upload product(即時新貨)</title>
+    <title>mobile upload product(最新訂貨)</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -372,7 +372,7 @@ if($allow_display)
             <div class="text-center">
                 <img src="https://www.djs.com.hk/wp-content/uploads/2022/11/photo.png" alt="">
             </div>
-            <h4 class="text-center">Djs Web Product Upload Via Mobile(即時新貨)</h4>
+            <h4 class="text-center">Djs Web Product Upload Via Mobile(最新訂貨)</h4>
 
             <div class="mt-4">
                 <label class="label-bold" for="product-name">*Product Name:</label>

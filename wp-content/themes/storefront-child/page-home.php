@@ -89,7 +89,7 @@ if ($query->have_posts()) {
 
         <?php
 echo '	<div class="clear-line"></div>';
-echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 即時新貨 - <a href="https://www.djs.com.hk/product-category/live-new-product/">View all </a> -</h2>';
+echo'<h2 class="page-title home-cate-'.get_the_ID().'">- 最新訂貨 - <a href="https://www.djs.com.hk/product-category/live-new-product/">View all </a> -</h2>';
 echo do_shortcode('[products category="live-new-product" limit="18" columns="4" visibility="visible" orderby="post_date" order="DESC"]');
 ?>
 
