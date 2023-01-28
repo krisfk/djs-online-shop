@@ -1034,6 +1034,15 @@ a.cart-contents:hover,
         left: auto;
         right: 66px;
     }
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-menu-ancestor>a.mega-menu-link,
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-page-ancestor>a.mega-menu-link {
+        color: #b61d6e;
+    }
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link {
+        text-indent: 14px;
+        color: #b61d6e;
+    }
 }
 
 @media (min-width: 768px) {
