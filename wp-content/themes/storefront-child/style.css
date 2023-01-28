@@ -1029,6 +1029,13 @@ a.cart-contents:hover,
 }
 
 @media (max-width: 768px) {
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-toggle-on>a.mega-menu-link {
+        color: #e72b8f;
+        background: none;
+        display: block;
+        margin: 0 auto;
+        text-indent: 0;
+    }
     .home-page-shortcut-blk {
         display: block;
         left: auto;
