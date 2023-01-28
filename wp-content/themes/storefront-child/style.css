@@ -1043,6 +1043,9 @@ a.cart-contents:hover,
         text-indent: 14px;
         color: #b61d6e;
     }
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item>a.mega-menu-link:hover {
+        color: #b61d6e;
+    }
 }
 
 @media (min-width: 768px) {
