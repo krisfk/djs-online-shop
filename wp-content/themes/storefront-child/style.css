@@ -1018,6 +1018,10 @@ button.menu-toggle:hover,
     color: #fff;
 }
 
+button.menu-toggle {
+    color: #333;
+}
+
 a.cart-contents:hover,
 .site-header-cart .widget_shopping_cart a:hover,
 .site-header-cart:hover>li>a {
