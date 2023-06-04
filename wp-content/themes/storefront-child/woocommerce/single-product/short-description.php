@@ -64,23 +64,27 @@ $(function() {
     <span style="font-weight:bold;">下單前請先細閱：</span> <br> <br>
 
     <span style="color:#d5418d;font-weight:bold;">訂貨程序：</span> <br>
-    ・網站內選購貨品>Checkout >入數付款確認<br>
-    ・可以credit card / FPS / Online Ebanking / ATM<br>
-    ・訂貨後>到貨wts通知 >門市取貨 /順豐到付<br>
-    ・如缺貨 全數退回<br><br>
+    ・網站內選購貨品後Checkout , 再付款確認訂單(未入數訂單未能成立) <br>
+    ・可以credit card (3.5% charge) / FPS / Online Ebanking / ATM<br>
+    ・貨到後會Wts通知大家<br>
+    ・兩星期內取貨 1/ 門市自取 或 2/順豐到付<br>
+    ・如缺貨會通知退款<br>
+    ・如太耐未收到通知 煩請聯絡我們 以免漏單<br><br>
+
+    <span style="color:#d5418d;font-weight:bold;">😘溫提：</span><br>
+    ・貨品如未到貨 恕未能每日更新 可隨時Wts查詢訂單<br>
+    ・貨品會因天氣問題到貨期不穩定 請見諒 恕不接急單 <br>
+    ・到貨後 如超過2星期未取貨, 並沒通知DJS, 訂單會自動動取消 不另通知 請見諒 <br><br>
+
 
     <span style="color:#d5418d;font-weight:bold;">注意：</span><br>
     因日圓浮動或日本不定期on sale，網站顯示的貨物價錢有機會隨時變動<br><br>
 
-    <!--  -->
     <span style="color:#d5418d;font-weight:bold;">門市地址:</span><br>
     ・觀塘 62號駿業街 京貿中心 2樓E<br>
     ・Tue-Sat 3-8pm / Sun 2-6pm<br>
     ・任何查詢可聯絡 Wts: 94444920<br><br>
 
-    <span style="color:#d5418d;font-weight:bold;">😘溫提：</span><br>
-    ・疫情期間到貨期不穩定 請理解見諒 急單接唔到 🙏🏻<br>
-    ・到貨後超過2星期未取貨並沒通知DJS/貨品會取消或需再訂
 
     <!-- <span style="color:#d5418d;font-weight:bold;">取貨方式：</span> <br><br>
 
