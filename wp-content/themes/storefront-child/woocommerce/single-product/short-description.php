@@ -39,7 +39,7 @@ if ($show_covid === NULL || $show_covid) {
 ?>
 
 <div class="show-covid">
-    <b>「訂貨」 **疫情關係 運輸偶有延遲 預2-3weeks</b>
+    <b>訂貨一般貨品預計2-3星期到貨</b>
 </div>
 
 <?php
