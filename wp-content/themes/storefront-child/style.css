@@ -1447,8 +1447,8 @@ a.cart-contents:hover,
   content: 'DJSSHOPPING';
   font-size: 30px;
   display: inline;
-  color: #e82b8f;
-  font-family: initial;
+  color: #bd146e;
+  /* font-family: initial; */
   /* font-family: 'Clicker Script', cursive; */
   float: left;
   margin: 9px 0 0 0;
