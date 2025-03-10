@@ -1153,7 +1153,7 @@ a.cart-contents:hover,
     width: 100%;
   }
   .woocommerce-active .site-header .main-navigation {
-    width: 83%;
+    width: 84%;
     float: left;
     margin-right: 4.347826087%;
     clear: both;
@@ -1162,7 +1162,7 @@ a.cart-contents:hover,
 }
 
 .woocommerce-active .site-header .site-header-cart {
-  width: 17%;
+  width: 16%;
   float: right;
   margin-right: 0;
   margin-bottom: 0;
