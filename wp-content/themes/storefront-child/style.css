@@ -1188,7 +1188,7 @@ a.cart-contents:hover,
 }
 
 .storefront-primary-navigation {
-  background: #d43c88;
+  background: #e08db8;
   /* border-top: 1px solid #d43c88; */
   /* border-style: dashed; */
   /* border-bottom: 1px solid #d43c88; */
@@ -1447,7 +1447,7 @@ a.cart-contents:hover,
   content: 'DJSSHOPPING';
   font-size: 30px;
   display: inline;
-  color: #bd146e;
+  color: #e072ac;
   /* font-family: initial; */
   /* font-family: 'Clicker Script', cursive; */
   float: left;
